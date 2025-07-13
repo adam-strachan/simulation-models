@@ -36,3 +36,5 @@ octave-workspace
 # Old backups
 *.r2024b
 *.r2024a
+
+.DS_Store

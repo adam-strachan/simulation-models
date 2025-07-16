@@ -1,0 +1,433 @@
+VERSION "DBC_PCAN_GPS_A"
+
+
+NS_ :
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_:
+
+
+BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
+ SG_ RTC_Sec : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ RTC_Min : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ RTC_Hour : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ RTC_DayOfWeek : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ RTC_DayOfMonth : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ RTC_Month : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ RTC_Year : 0|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ Config_SaveToEEPROM : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ RTC_SetTimeFromGPS : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ RTC_SetSec : 0|8@1+ (1,0) [0|59] "" Vector__XXX
+ SG_ RTC_SetMin : 0|8@1+ (1,0) [0|59] "" Vector__XXX
+ SG_ RTC_SetHour : 0|8@1+ (1,0) [0|23] "" Vector__XXX
+ SG_ RTC_SetDayOfWeek : 0|8@1+ (1,0) [0|6] "" Vector__XXX
+ SG_ RTC_SetDayOfMonth : 0|8@1+ (1,0) [1|31] "" Vector__XXX
+ SG_ RTC_SetMonth : 0|8@1+ (1,0) [1|12] "" Vector__XXX
+ SG_ RTC_SetYear : 0|16@1+ (1,0) [1900|2099] "" Vector__XXX
+ SG_ Device_PowerOff : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Dout_Set : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ GPS_SetPower : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Gyro_SetScale : 0|2@1+ (1,0) [0|3] "�/s" Vector__XXX
+ SG_ Acc_SetScale : 0|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ Acc_SetCalibTarget_X : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Acc_SetCalibTarget_Y : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Acc_SetCalibTarget_Z : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Acc_StartFastCalib : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Rotation_Z : 0|32@1- (1,0) [-4000|4000] "�/s" Vector__XXX
+ SG_ Rotation_X : 0|32@1- (1,0) [-4000|4000] "�/s" Vector__XXX
+ SG_ Rotation_Y : 0|32@1- (1,0) [-4000|4000] "�/s" Vector__XXX
+ SG_ Din1_Status : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Din2_Status : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Dout_Status : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SD_Present : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ GPS_PowerStatus : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Device_ID : 0|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ GPS_SatelliteInView : 0|8@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ GPS_Talker_ID : 0|8@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ GPS_AntennaStatus : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ GPS_NumSatellites : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ GPS_NavigationMethod : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ GPS_Longitude_Degree : 0|16@1+ (1,0) [0|359] "�" Vector__XXX
+ SG_ GPS_Longitude_Minutes : 0|32@1- (1,0) [-3.4E+038|3.4E+038] "'" Vector__XXX
+ SG_ GPS_IndicatorEW : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ GPS_Latitude_Degree : 0|16@1+ (1,0) [0|359] "�" Vector__XXX
+ SG_ GPS_Latitude_Minutes : 0|32@1- (1,0) [-3.4E+038|3.4E+038] "'" Vector__XXX
+ SG_ GPS_IndicatorNS : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ GPS_Altitude : 0|32@1- (1,0) [-3.4E+038|3.4E+038] "m" Vector__XXX
+ SG_ GPS_VDOP : 0|32@1- (1,0) [-3.4E+038|3.4E+038] "" Vector__XXX
+ SG_ UTC_LeapSecondStatus : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ UTC_LeapSeconds : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ UTC_Year : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ UTC_Month : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ UTC_DayOfMonth : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ UTC_Hour : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ UTC_Minute : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ UTC_Second : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ GPS_Course : 0|32@1- (1,0) [-3.4E+038|3.4E+038] "�" Vector__XXX
+ SG_ GPS_Speed : 0|32@1- (1,0) [-3.4E+038|3.4E+038] "km/h" Vector__XXX
+ SG_ MagneticField_X : 0|16@1- (0.3,0) [-9830.4|9830.1] "�T" Vector__XXX
+ SG_ MagneticField_Y : 0|16@1- (0.3,0) [-9830.4|9830.1] "�T" Vector__XXX
+ SG_ MagneticField_Z : 0|16@1- (0.3,0) [-9830.4|9830.1] "�T" Vector__XXX
+ SG_ Acceleration_X : 0|16@1- (3.91,0) [-20000|20000] "mG" Vector__XXX
+ SG_ Acceleration_Y : 0|16@1- (3.91,0) [-20000|20000] "mG" Vector__XXX
+ SG_ Acceleration_Z : 0|16@1- (3.91,0) [-20000|20000] "mG" Vector__XXX
+ SG_ Temperature : 0|8@1- (0.5,24) [-40|87.5] "�C" Vector__XXX
+ SG_ VerticalAxis : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Orientation : 0|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ GPS_PDOP : 0|32@1- (1,0) [-3.4E+038|3.4E+038] "" Vector__XXX
+ SG_ GPS_HDOP : 0|32@1- (1,0) [-3.4E+038|3.4E+038] "" Vector__XXX
+
+BO_ 2561320485 GPS_Delusions_A_1: 8 Vector__XXX
+ SG_ GPS_PDOP : 0|32@1- (1,0) [-3.4E+038|3.4E+038] "" Vector__XXX
+ SG_ GPS_HDOP : 32|32@1- (1,0) [-3.4E+038|3.4E+038] "" Vector__XXX
+
+BO_ 2561320448 BMC_Acceleration_1: 8 Vector__XXX
+ SG_ Acceleration_X : 0|16@1- (3.91,0) [-20000|20000] "mG" Vector__XXX
+ SG_ Acceleration_Y : 16|16@1- (3.91,0) [-20000|20000] "mG" Vector__XXX
+ SG_ Acceleration_Z : 32|16@1- (3.91,0) [-20000|20000] "mG" Vector__XXX
+ SG_ Temperature : 48|8@1- (0.5,24) [-40|87.5] "�C" Vector__XXX
+ SG_ VerticalAxis : 56|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Orientation : 58|3@1+ (1,0) [0|7] "" Vector__XXX
+
+BO_ 2561320449 BMC_MagneticField_1: 6 Vector__XXX
+ SG_ MagneticField_X : 0|16@1- (0.3,0) [-9830.4|9830.1] "�T" Vector__XXX
+ SG_ MagneticField_Y : 16|16@1- (0.3,0) [-9830.4|9830.1] "�T" Vector__XXX
+ SG_ MagneticField_Z : 32|16@1- (0.3,0) [-9830.4|9830.1] "�T" Vector__XXX
+
+BO_ 2561320464 L3GD20_Rotation_A_1: 8 Vector__XXX
+ SG_ Rotation_X : 0|32@1- (1,0) [-4000|4000] "�/s" Vector__XXX
+ SG_ Rotation_Y : 32|32@1- (1,0) [-4000|4000] "�/s" Vector__XXX
+
+BO_ 2561320465 L3GD20_Rotation_B_1: 4 Vector__XXX
+ SG_ Rotation_Z : 0|32@1- (1,0) [-4000|4000] "�/s" Vector__XXX
+
+BO_ 2561320480 GPS_Status_1: 5 Vector__XXX
+ SG_ GPS_SatelliteInView : 32|8@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ GPS_Talker_ID : 24|8@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ GPS_AntennaStatus : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ GPS_NumSatellites : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ GPS_NavigationMethod : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2561320481 GPS_CourseSpeed_1: 8 Vector__XXX
+ SG_ GPS_Course : 0|32@1- (1,0) [-3.4E+038|3.4E+038] "�" Vector__XXX
+ SG_ GPS_Speed : 32|32@1- (1,0) [-3.4E+038|3.4E+038] "km/h" Vector__XXX
+
+BO_ 2561320482 GPS_PositionLongitude_1: 7 Vector__XXX
+ SG_ GPS_Longitude_Degree : 32|16@1+ (1,0) [0|359] "�" Vector__XXX
+ SG_ GPS_Longitude_Minutes : 0|32@1- (1,0) [-3.4E+038|3.4E+038] "'" Vector__XXX
+ SG_ GPS_IndicatorEW : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2561320483 GPS_PositionLatitude_1: 7 Vector__XXX
+ SG_ GPS_Latitude_Degree : 32|16@1+ (1,0) [0|359] "�" Vector__XXX
+ SG_ GPS_Latitude_Minutes : 0|32@1- (1,0) [-3.4E+038|3.4E+038] "'" Vector__XXX
+ SG_ GPS_IndicatorNS : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2561320484 GPS_PositionAltitude_1: 4 Vector__XXX
+ SG_ GPS_Altitude : 0|32@1- (1,0) [-3.4E+038|3.4E+038] "m" Vector__XXX
+
+BO_ 2561320486 GPS_Delusions_B_1: 4 Vector__XXX
+ SG_ GPS_VDOP : 0|32@1- (1,0) [-3.4E+038|3.4E+038] "" Vector__XXX
+
+BO_ 2561320487 GPS_DateTime_1: 8 Vector__XXX
+ SG_ UTC_LeapSecondStatus : 56|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ UTC_LeapSeconds : 48|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ UTC_Year : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ UTC_Month : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ UTC_DayOfMonth : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ UTC_Hour : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ UTC_Minute : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ UTC_Second : 40|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2561320496 IO_1: 1 Vector__XXX
+ SG_ Din1_Status : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Din2_Status : 1|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Dout_Status : 2|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SD_Present : 3|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ GPS_PowerStatus : 4|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Device_ID : 5|3@1+ (1,0) [0|7] "" Vector__XXX
+
+BO_ 2561320512 RTC_DateTime_1: 8 Vector__XXX
+ SG_ RTC_Sec : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ RTC_Min : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ RTC_Hour : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ RTC_DayOfWeek : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ RTC_DayOfMonth : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ RTC_Month : 40|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ RTC_Year : 48|16@1+ (1,0) [0|65535] "" Vector__XXX
+
+BO_ 2561320528 Out_IO_1: 1 Vector__XXX
+ SG_ Dout_Set : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ GPS_SetPower : 1|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 2561320529 Out_PowerOff_1: 1 Vector__XXX
+ SG_ Device_PowerOff : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 2561320530 Out_Gyro_1: 1 Vector__XXX
+ SG_ Gyro_SetScale : 0|2@1+ (1,0) [0|3] "�/s" Vector__XXX
+
+BO_ 2561320531 Out_BMC_AccScale_1: 1 Vector__XXX
+ SG_ Acc_SetScale : 0|3@1+ (1,0) [0|7] "" Vector__XXX
+
+BO_ 2561320532 Out_SaveConfig_1: 1 Vector__XXX
+ SG_ Config_SaveToEEPROM : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 2561320533 Out_RTC_SetTime_1: 8 Vector__XXX
+ SG_ RTC_SetSec : 0|8@1+ (1,0) [0|59] "" Vector__XXX
+ SG_ RTC_SetMin : 8|8@1+ (1,0) [0|59] "" Vector__XXX
+ SG_ RTC_SetHour : 16|8@1+ (1,0) [0|23] "" Vector__XXX
+ SG_ RTC_SetDayOfWeek : 24|8@1+ (1,0) [0|6] "" Vector__XXX
+ SG_ RTC_SetDayOfMonth : 32|8@1+ (1,0) [1|31] "" Vector__XXX
+ SG_ RTC_SetMonth : 40|8@1+ (1,0) [1|12] "" Vector__XXX
+ SG_ RTC_SetYear : 48|16@1+ (1,0) [1900|2099] "" Vector__XXX
+
+BO_ 2561320534 Out_RTC_TimeFromGPS_1: 1 Vector__XXX
+ SG_ RTC_SetTimeFromGPS : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 2561320535 Out_Acc_FastCalibration_1: 4 Vector__XXX
+ SG_ Acc_SetCalibTarget_X : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Acc_SetCalibTarget_Y : 8|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Acc_SetCalibTarget_Z : 16|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Acc_StartFastCalib : 24|1@1+ (1,0) [0|1] "" Vector__XXX
+
+
+
+CM_ BO_ 3221225472 "This is a message for not used signals, created by Vector CANdb++ DBC OLE DB Provider.";
+CM_ SG_ 3221225472 Config_SaveToEEPROM "Saves sensor ranges and calibration targets to EERPOM to restore them after startup";
+CM_ SG_ 3221225472 RTC_SetTimeFromGPS "Note: GPS time does not know the day of week!";
+CM_ SG_ 2561320532 Config_SaveToEEPROM "Saves sensor ranges and calibration targets to EERPOM to restore them after startup";
+CM_ SG_ 2561320534 RTC_SetTimeFromGPS "Note: GPS time does not know the day of week!";
+BA_DEF_  "BusType" STRING ;
+BA_DEF_ SG_  "GenSigStartValue" FLOAT -3.4E+038 3.4E+038;
+BA_DEF_DEF_  "BusType" "CAN";
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_ "BusType" "CAN";
+BA_ "GenSigStartValue" SG_ 3221225472 RTC_Sec 0;
+BA_ "GenSigStartValue" SG_ 3221225472 RTC_Min 0;
+BA_ "GenSigStartValue" SG_ 3221225472 RTC_Hour 0;
+BA_ "GenSigStartValue" SG_ 3221225472 RTC_DayOfWeek 0;
+BA_ "GenSigStartValue" SG_ 3221225472 RTC_DayOfMonth 0;
+BA_ "GenSigStartValue" SG_ 3221225472 RTC_Month 0;
+BA_ "GenSigStartValue" SG_ 3221225472 RTC_Year 0;
+BA_ "GenSigStartValue" SG_ 3221225472 Config_SaveToEEPROM 0;
+BA_ "GenSigStartValue" SG_ 3221225472 RTC_SetTimeFromGPS 0;
+BA_ "GenSigStartValue" SG_ 3221225472 RTC_SetSec 0;
+BA_ "GenSigStartValue" SG_ 3221225472 RTC_SetMin 0;
+BA_ "GenSigStartValue" SG_ 3221225472 RTC_SetHour 0;
+BA_ "GenSigStartValue" SG_ 3221225472 RTC_SetDayOfWeek 0;
+BA_ "GenSigStartValue" SG_ 3221225472 RTC_SetDayOfMonth 0;
+BA_ "GenSigStartValue" SG_ 3221225472 RTC_SetMonth 0;
+BA_ "GenSigStartValue" SG_ 3221225472 RTC_SetYear 0;
+BA_ "GenSigStartValue" SG_ 3221225472 Device_PowerOff 0;
+BA_ "GenSigStartValue" SG_ 3221225472 Dout_Set 0;
+BA_ "GenSigStartValue" SG_ 3221225472 GPS_SetPower 1;
+BA_ "GenSigStartValue" SG_ 3221225472 Gyro_SetScale 0;
+BA_ "GenSigStartValue" SG_ 3221225472 Acc_SetScale 1;
+BA_ "GenSigStartValue" SG_ 3221225472 Acc_SetCalibTarget_X 0;
+BA_ "GenSigStartValue" SG_ 3221225472 Acc_SetCalibTarget_Y 0;
+BA_ "GenSigStartValue" SG_ 3221225472 Acc_SetCalibTarget_Z 0;
+BA_ "GenSigStartValue" SG_ 3221225472 Acc_StartFastCalib 0;
+BA_ "GenSigStartValue" SG_ 3221225472 Rotation_Z 0;
+BA_ "GenSigStartValue" SG_ 3221225472 Rotation_X 0;
+BA_ "GenSigStartValue" SG_ 3221225472 Rotation_Y 0;
+BA_ "GenSigStartValue" SG_ 3221225472 Din1_Status 0;
+BA_ "GenSigStartValue" SG_ 3221225472 Din2_Status 0;
+BA_ "GenSigStartValue" SG_ 3221225472 Dout_Status 0;
+BA_ "GenSigStartValue" SG_ 3221225472 SD_Present 0;
+BA_ "GenSigStartValue" SG_ 3221225472 GPS_PowerStatus 0;
+BA_ "GenSigStartValue" SG_ 3221225472 Device_ID 0;
+BA_ "GenSigStartValue" SG_ 3221225472 GPS_AntennaStatus 0;
+BA_ "GenSigStartValue" SG_ 3221225472 GPS_NumSatellites 0;
+BA_ "GenSigStartValue" SG_ 3221225472 GPS_NavigationMethod 0;
+BA_ "GenSigStartValue" SG_ 3221225472 GPS_Longitude_Degree 0;
+BA_ "GenSigStartValue" SG_ 3221225472 GPS_Longitude_Minutes 0;
+BA_ "GenSigStartValue" SG_ 3221225472 GPS_IndicatorEW 0;
+BA_ "GenSigStartValue" SG_ 3221225472 GPS_Latitude_Degree 0;
+BA_ "GenSigStartValue" SG_ 3221225472 GPS_Latitude_Minutes 0;
+BA_ "GenSigStartValue" SG_ 3221225472 GPS_IndicatorNS 0;
+BA_ "GenSigStartValue" SG_ 3221225472 GPS_Altitude 0;
+BA_ "GenSigStartValue" SG_ 3221225472 GPS_VDOP 0;
+BA_ "GenSigStartValue" SG_ 3221225472 UTC_Year 0;
+BA_ "GenSigStartValue" SG_ 3221225472 UTC_Month 0;
+BA_ "GenSigStartValue" SG_ 3221225472 UTC_DayOfMonth 0;
+BA_ "GenSigStartValue" SG_ 3221225472 UTC_Hour 0;
+BA_ "GenSigStartValue" SG_ 3221225472 UTC_Minute 0;
+BA_ "GenSigStartValue" SG_ 3221225472 UTC_Second 0;
+BA_ "GenSigStartValue" SG_ 3221225472 GPS_Course 0;
+BA_ "GenSigStartValue" SG_ 3221225472 GPS_Speed 0;
+BA_ "GenSigStartValue" SG_ 3221225472 MagneticField_X 0;
+BA_ "GenSigStartValue" SG_ 3221225472 MagneticField_Y 0;
+BA_ "GenSigStartValue" SG_ 3221225472 MagneticField_Z 0;
+BA_ "GenSigStartValue" SG_ 3221225472 Acceleration_X 0;
+BA_ "GenSigStartValue" SG_ 3221225472 Acceleration_Y 0;
+BA_ "GenSigStartValue" SG_ 3221225472 Acceleration_Z 0;
+BA_ "GenSigStartValue" SG_ 3221225472 Temperature -48;
+BA_ "GenSigStartValue" SG_ 3221225472 VerticalAxis 0;
+BA_ "GenSigStartValue" SG_ 3221225472 Orientation 0;
+BA_ "GenSigStartValue" SG_ 3221225472 GPS_PDOP 0;
+BA_ "GenSigStartValue" SG_ 3221225472 GPS_HDOP 0;
+BA_ "GenSigStartValue" SG_ 2561320485 GPS_PDOP 0;
+BA_ "GenSigStartValue" SG_ 2561320485 GPS_HDOP 0;
+BA_ "GenSigStartValue" SG_ 2561320448 Acceleration_X 0;
+BA_ "GenSigStartValue" SG_ 2561320448 Acceleration_Y 0;
+BA_ "GenSigStartValue" SG_ 2561320448 Acceleration_Z 0;
+BA_ "GenSigStartValue" SG_ 2561320448 Temperature -48;
+BA_ "GenSigStartValue" SG_ 2561320448 VerticalAxis 0;
+BA_ "GenSigStartValue" SG_ 2561320448 Orientation 0;
+BA_ "GenSigStartValue" SG_ 2561320449 MagneticField_X 0;
+BA_ "GenSigStartValue" SG_ 2561320449 MagneticField_Y 0;
+BA_ "GenSigStartValue" SG_ 2561320449 MagneticField_Z 0;
+BA_ "GenSigStartValue" SG_ 2561320464 Rotation_X 0;
+BA_ "GenSigStartValue" SG_ 2561320464 Rotation_Y 0;
+BA_ "GenSigStartValue" SG_ 2561320465 Rotation_Z 0;
+BA_ "GenSigStartValue" SG_ 2561320480 GPS_AntennaStatus 0;
+BA_ "GenSigStartValue" SG_ 2561320480 GPS_NumSatellites 0;
+BA_ "GenSigStartValue" SG_ 2561320480 GPS_NavigationMethod 0;
+BA_ "GenSigStartValue" SG_ 2561320481 GPS_Course 0;
+BA_ "GenSigStartValue" SG_ 2561320481 GPS_Speed 0;
+BA_ "GenSigStartValue" SG_ 2561320482 GPS_Longitude_Degree 0;
+BA_ "GenSigStartValue" SG_ 2561320482 GPS_Longitude_Minutes 0;
+BA_ "GenSigStartValue" SG_ 2561320482 GPS_IndicatorEW 0;
+BA_ "GenSigStartValue" SG_ 2561320483 GPS_Latitude_Degree 0;
+BA_ "GenSigStartValue" SG_ 2561320483 GPS_Latitude_Minutes 0;
+BA_ "GenSigStartValue" SG_ 2561320483 GPS_IndicatorNS 0;
+BA_ "GenSigStartValue" SG_ 2561320484 GPS_Altitude 0;
+BA_ "GenSigStartValue" SG_ 2561320486 GPS_VDOP 0;
+BA_ "GenSigStartValue" SG_ 2561320487 UTC_Year 0;
+BA_ "GenSigStartValue" SG_ 2561320487 UTC_Month 0;
+BA_ "GenSigStartValue" SG_ 2561320487 UTC_DayOfMonth 0;
+BA_ "GenSigStartValue" SG_ 2561320487 UTC_Hour 0;
+BA_ "GenSigStartValue" SG_ 2561320487 UTC_Minute 0;
+BA_ "GenSigStartValue" SG_ 2561320487 UTC_Second 0;
+BA_ "GenSigStartValue" SG_ 2561320496 Din1_Status 0;
+BA_ "GenSigStartValue" SG_ 2561320496 Din2_Status 0;
+BA_ "GenSigStartValue" SG_ 2561320496 Dout_Status 0;
+BA_ "GenSigStartValue" SG_ 2561320496 SD_Present 0;
+BA_ "GenSigStartValue" SG_ 2561320496 GPS_PowerStatus 0;
+BA_ "GenSigStartValue" SG_ 2561320496 Device_ID 0;
+BA_ "GenSigStartValue" SG_ 2561320512 RTC_Sec 0;
+BA_ "GenSigStartValue" SG_ 2561320512 RTC_Min 0;
+BA_ "GenSigStartValue" SG_ 2561320512 RTC_Hour 0;
+BA_ "GenSigStartValue" SG_ 2561320512 RTC_DayOfWeek 0;
+BA_ "GenSigStartValue" SG_ 2561320512 RTC_DayOfMonth 0;
+BA_ "GenSigStartValue" SG_ 2561320512 RTC_Month 0;
+BA_ "GenSigStartValue" SG_ 2561320512 RTC_Year 0;
+BA_ "GenSigStartValue" SG_ 2561320528 Dout_Set 0;
+BA_ "GenSigStartValue" SG_ 2561320528 GPS_SetPower 1;
+BA_ "GenSigStartValue" SG_ 2561320529 Device_PowerOff 0;
+BA_ "GenSigStartValue" SG_ 2561320530 Gyro_SetScale 0;
+BA_ "GenSigStartValue" SG_ 2561320531 Acc_SetScale 1;
+BA_ "GenSigStartValue" SG_ 2561320532 Config_SaveToEEPROM 0;
+BA_ "GenSigStartValue" SG_ 2561320533 RTC_SetSec 0;
+BA_ "GenSigStartValue" SG_ 2561320533 RTC_SetMin 0;
+BA_ "GenSigStartValue" SG_ 2561320533 RTC_SetHour 0;
+BA_ "GenSigStartValue" SG_ 2561320533 RTC_SetDayOfWeek 0;
+BA_ "GenSigStartValue" SG_ 2561320533 RTC_SetDayOfMonth 0;
+BA_ "GenSigStartValue" SG_ 2561320533 RTC_SetMonth 0;
+BA_ "GenSigStartValue" SG_ 2561320533 RTC_SetYear 0;
+BA_ "GenSigStartValue" SG_ 2561320534 RTC_SetTimeFromGPS 0;
+BA_ "GenSigStartValue" SG_ 2561320535 Acc_SetCalibTarget_X 0;
+BA_ "GenSigStartValue" SG_ 2561320535 Acc_SetCalibTarget_Y 0;
+BA_ "GenSigStartValue" SG_ 2561320535 Acc_SetCalibTarget_Z 0;
+BA_ "GenSigStartValue" SG_ 2561320535 Acc_StartFastCalib 0;
+VAL_ 3221225472 RTC_DayOfWeek 0 "Monday" 1 "Tuesday" 2 "Wednesday" 3 "Thursday" 4 "Friday" 5 "Saturday" 6 "Sunday" ;
+VAL_ 3221225472 Config_SaveToEEPROM 0 "False" 1 "True" ;
+VAL_ 3221225472 RTC_SetTimeFromGPS 0 "False" 1 "True" ;
+VAL_ 3221225472 RTC_SetDayOfWeek 0 "Monday" 1 "Tuesday" 2 "Wednesday" 3 "Thursday" 4 "Friday" 5 "Saturday" 6 "Sunday" ;
+VAL_ 3221225472 RTC_SetMonth 1 "January" 2 "February" 3 "March" 4 "April" 5 "May" 6 "June" 7 "July" 8 "August" 9 "September" 10 "October" 11 "November" 12 "December" ;
+VAL_ 3221225472 Device_PowerOff 0 "False" 1 "True" ;
+VAL_ 3221225472 Dout_Set 0 "Off" 1 "On" ;
+VAL_ 3221225472 GPS_SetPower 0 "Off" 1 "On" ;
+VAL_ 3221225472 Gyro_SetScale 0 "�250 �/s" 1 "�500 �/s" 2 "�2000 �/s" 3 "�2000 �/s" ;
+VAL_ 3221225472 Acc_SetScale 1 "�2 G" 2 "�4 G" 3 "�8 G" 4 "�16 G" ;
+VAL_ 3221225472 Acc_SetCalibTarget_X 0 "0 G" 1 "+1 G" 2 "-1 G" ;
+VAL_ 3221225472 Acc_SetCalibTarget_Y 0 "0 G" 1 "+1 G" 2 "-1 G" ;
+VAL_ 3221225472 Acc_SetCalibTarget_Z 0 "0 G" 1 "+1 G" 2 "-1 G" ;
+VAL_ 3221225472 Acc_StartFastCalib 0 "False" 1 "True" ;
+VAL_ 3221225472 Din1_Status 0 "Off" 1 "On" ;
+VAL_ 3221225472 Din2_Status 0 "Off" 1 "On" ;
+VAL_ 3221225472 Dout_Status 0 "Off" 1 "On" ;
+VAL_ 3221225472 SD_Present 0 "False" 1 "True" ;
+VAL_ 3221225472 GPS_PowerStatus 0 "Off" 1 "On" ;
+VAL_ 3221225472 GPS_AntennaStatus 0 "INIT" 1 "DONTKNOW" 2 "OK" 3 "SHORT" 4 "OPEN" ;
+VAL_ 3221225472 GPS_NavigationMethod 0 "INIT" 1 "NONE" 2 "2D" 3 "3D" ;
+VAL_ 3221225472 GPS_IndicatorEW 0 "INIT" 69 "East" 78 "North" 83 "South" 87 "West" ;
+VAL_ 3221225472 GPS_IndicatorNS 0 "INIT" 69 "East" 78 "North" 83 "South" 87 "West" ;
+VAL_ 3221225472 VerticalAxis 0 "undefined" 1 "X Axis" 2 "Y Axis" 3 "Z Axis" ;
+VAL_ 3221225472 Orientation 0 "flat" 1 "flat upside down" 2 "landscape left" 3 "landscape right" 4 "portrait" 5 "portrait upside down" ;
+VAL_ 2561320448 VerticalAxis 0 "undefined" 1 "X Axis" 2 "Y Axis" 3 "Z Axis" ;
+VAL_ 2561320448 Orientation 0 "flat" 1 "flat upside down" 2 "landscape left" 3 "landscape right" 4 "portrait" 5 "portrait upside down" ;
+VAL_ 2561320480 GPS_AntennaStatus 0 "INIT" 1 "DONTKNOW" 2 "OK" 3 "SHORT" 4 "OPEN" ;
+VAL_ 2561320480 GPS_NavigationMethod 0 "INIT" 1 "NONE" 2 "2D" 3 "3D" ;
+VAL_ 2561320482 GPS_IndicatorEW 0 "INIT" 69 "East" 78 "North" 83 "South" 87 "West" ;
+VAL_ 2561320483 GPS_IndicatorNS 0 "INIT" 69 "East" 78 "North" 83 "South" 87 "West" ;
+VAL_ 2561320496 Din1_Status 0 "Off" 1 "On" ;
+VAL_ 2561320496 Din2_Status 0 "Off" 1 "On" ;
+VAL_ 2561320496 Dout_Status 0 "Off" 1 "On" ;
+VAL_ 2561320496 SD_Present 0 "False" 1 "True" ;
+VAL_ 2561320496 GPS_PowerStatus 0 "Off" 1 "On" ;
+VAL_ 2561320512 RTC_DayOfWeek 0 "Monday" 1 "Tuesday" 2 "Wednesday" 3 "Thursday" 4 "Friday" 5 "Saturday" 6 "Sunday" ;
+VAL_ 2561320528 Dout_Set 0 "Off" 1 "On" ;
+VAL_ 2561320528 GPS_SetPower 0 "Off" 1 "On" ;
+VAL_ 2561320529 Device_PowerOff 0 "False" 1 "True" ;
+VAL_ 2561320530 Gyro_SetScale 0 "�250 �/s" 1 "�500 �/s" 2 "�2000 �/s" 3 "�2000 �/s" ;
+VAL_ 2561320531 Acc_SetScale 1 "�2 G" 2 "�4 G" 3 "�8 G" 4 "�16 G" ;
+VAL_ 2561320532 Config_SaveToEEPROM 0 "False" 1 "True" ;
+VAL_ 2561320533 RTC_SetDayOfWeek 0 "Monday" 1 "Tuesday" 2 "Wednesday" 3 "Thursday" 4 "Friday" 5 "Saturday" 6 "Sunday" ;
+VAL_ 2561320533 RTC_SetMonth 1 "January" 2 "February" 3 "March" 4 "April" 5 "May" 6 "June" 7 "July" 8 "August" 9 "September" 10 "October" 11 "November" 12 "December" ;
+VAL_ 2561320534 RTC_SetTimeFromGPS 0 "False" 1 "True" ;
+VAL_ 2561320535 Acc_SetCalibTarget_X 0 "0 G" 1 "+1 G" 2 "-1 G" ;
+VAL_ 2561320535 Acc_SetCalibTarget_Y 0 "0 G" 1 "+1 G" 2 "-1 G" ;
+VAL_ 2561320535 Acc_SetCalibTarget_Z 0 "0 G" 1 "+1 G" 2 "-1 G" ;
+VAL_ 2561320535 Acc_StartFastCalib 0 "False" 1 "True" ;
+SIG_VALTYPE_ 3221225472 Rotation_Z : 1;
+SIG_VALTYPE_ 3221225472 Rotation_X : 1;
+SIG_VALTYPE_ 3221225472 Rotation_Y : 1;
+SIG_VALTYPE_ 3221225472 GPS_Longitude_Minutes : 1;
+SIG_VALTYPE_ 3221225472 GPS_Latitude_Minutes : 1;
+SIG_VALTYPE_ 3221225472 GPS_Altitude : 1;
+SIG_VALTYPE_ 3221225472 GPS_VDOP : 1;
+SIG_VALTYPE_ 3221225472 GPS_Course : 1;
+SIG_VALTYPE_ 3221225472 GPS_Speed : 1;
+SIG_VALTYPE_ 3221225472 GPS_PDOP : 1;
+SIG_VALTYPE_ 3221225472 GPS_HDOP : 1;
+SIG_VALTYPE_ 2561320485 GPS_PDOP : 1;
+SIG_VALTYPE_ 2561320485 GPS_HDOP : 1;
+SIG_VALTYPE_ 2561320464 Rotation_X : 1;
+SIG_VALTYPE_ 2561320464 Rotation_Y : 1;
+SIG_VALTYPE_ 2561320465 Rotation_Z : 1;
+SIG_VALTYPE_ 2561320481 GPS_Course : 1;
+SIG_VALTYPE_ 2561320481 GPS_Speed : 1;
+SIG_VALTYPE_ 2561320482 GPS_Longitude_Minutes : 1;
+SIG_VALTYPE_ 2561320483 GPS_Latitude_Minutes : 1;
+SIG_VALTYPE_ 2561320484 GPS_Altitude : 1;
+SIG_VALTYPE_ 2561320486 GPS_VDOP : 1;
+

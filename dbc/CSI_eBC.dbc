@@ -1,0 +1,209 @@
+VERSION "DBC_CSI_BC"
+
+
+NS_ :
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: BMU TMS
+
+
+BO_ 2566866420 B2TMInfo: 8 BMU
+ SG_ B2TRQSetModeA : 1|2@0+ (1,0) [0|3] ""  TMS
+ SG_ B2TRQHVA : 3|2@0+ (1,0) [0|3] ""  TMS
+ SG_ B2TChgSTA : 5|2@0+ (1,0) [0|3] ""  TMS
+ SG_ B2TBMSHVRelaySTA : 7|2@0+ (1,0) [0|3] ""  TMS
+ SG_ B2TBMSHVVoltA : 15|16@0+ (1,0) [0|65535] ""  TMS
+ SG_ B2TBMSR1 : 31|8@0+ (1,0) [0|255] ""  TMS
+ SG_ B2TSetTempA : 39|8@0+ (1,-40) [-40|215] "��"  TMS
+ SG_ B2TBMSR2 : 47|8@0+ (1,0) [0|255] ""  TMS
+ SG_ B2TMBMSALIVA : 55|8@0+ (1,0) [0|255] ""  TMS
+ SG_ B2TMCRCA : 63|8@0+ (1,0) [0|255] ""  TMS
+
+BO_ 2566897978 TM2BInfo: 8 TMS
+ SG_ T2BWorkStatusA : 1|2@0+ (1,0) [0|3] ""  BMU
+ SG_ T2BTMSHVRelaySTA : 3|2@0+ (1,0) [0|3] ""  BMU
+ SG_ TM2BInfoReserved1 : 7|4@0+ (1,0) [0|15] ""  BMU
+ SG_ TM2BOutletTempA : 15|8@0+ (1,-40) [-40|215] "��"  BMU
+ SG_ TM2BInletTempA : 23|8@0+ (1,-40) [-40|215] "��"  BMU
+ SG_ TM2BInfoReserved2 : 31|16@0+ (1,0) [0|65535] ""  BMU
+ SG_ TM2BRQPowerA : 47|16@0+ (0.1,0) [0|6553.5] "Kw"  BMU
+ SG_ TM2BFaultCodeA : 61|6@0+ (1,0) [0|63] ""  BMU
+ SG_ TM2BFaultLevelA : 63|2@0+ (1,0) [0|3] ""  BMU
+
+
+
+CM_ BO_ 2566866420 "BMS���͵�TMS�����ݣ�ˮ����Ŀ��
+The  information from  BMS to TMS";
+CM_ SG_ 2566866420 B2TRQSetModeA "BMS�����趨ģʽ
+Working mode command from BMS to TMS";
+CM_ SG_ 2566866420 B2TRQHVA "��ѹ����
+High-voltage command from BMS to TMS";
+CM_ SG_ 2566866420 B2TChgSTA "���״̬
+BMS charge status";
+CM_ SG_ 2566866420 B2TBMSHVRelaySTA "BMS��ѹ�̵���״̬
+BMS high-voltage contactor status";
+CM_ SG_ 2566866420 B2TBMSHVVoltA "BMS��ǰ��ѹ
+Pack voltage";
+CM_ SG_ 2566866420 B2TBMSR1 "Ԥ��(���0)
+Reserved(filled in 0��";
+CM_ SG_ 2566866420 B2TSetTempA "�趨�¶�
+Setting temperature";
+CM_ SG_ 2566866420 B2TBMSR2 "Ԥ��(���0)
+Reserved(filled in 0��";
+CM_ SG_ 2566866420 B2TMBMSALIVA "BMS����֡(��ѡ��)
+BMS life signal��Reserved��";
+CM_ SG_ 2566866420 B2TMCRCA "CRCУ��ֵ(��ѡ��)
+CRC��Reserved��";
+CM_ BO_ 2566897978 "TMS���͵�BMS�����ݣ�ˮ����Ŀ��
+The  information from   TMS to BMS";
+CM_ SG_ 2566897978 T2BWorkStatusA "TMS����״̬
+TMS work status";
+CM_ SG_ 2566897978 T2BTMSHVRelaySTA "TMS�ļ̵���״̬
+TMS contactor status";
+CM_ SG_ 2566897978 TM2BInfoReserved1 "Ԥ��(���0)
+Reserved(filled in 0��";
+CM_ SG_ 2566897978 TM2BOutletTempA "TMS��ˮ�¶�(���鵽���)
+TMS outlet water temperature��From TMS to pack��";
+CM_ SG_ 2566897978 TM2BInletTempA "TMS��ˮ�¶�(��ص�����)
+TMS flooding water temperature��From TMS to pack��";
+CM_ SG_ 2566897978 TM2BInfoReserved2 "Ԥ��(���0)
+Reserved(filled in 0��";
+CM_ SG_ 2566897978 TM2BRQPowerA "ˮ�����������
+TMS requirement power";
+CM_ SG_ 2566897978 TM2BFaultCodeA "TMS���ϴ���(����1������ѭ������)
+TMS fault code";
+CM_ SG_ 2566897978 TM2BFaultLevelA "TMS���ϵȼ�
+TMS fault level";
+BA_DEF_ SG_  "GenSigTimeoutTime_BMU" INT 0 100000;
+BA_DEF_ SG_  "GenSigSendType" ENUM  "Cyclic","OnWrite","OnWriteWithRepetition","OnChange","OnChangeWithRepetition","IfActive","IfActiveWithRepetition","NoSigSendType","NotUsed","Event","CE","CA","NotUsed";
+BA_DEF_ SG_  "GenSigInactiveValue" INT 0 100000;
+BA_DEF_ SG_  "GenSigStartValue" INT 0 0;
+BA_DEF_ BO_  "GenMsgFastOnStart" INT 0 65535;
+BA_DEF_ BO_  "TpTxIndex" INT 0 255;
+BA_DEF_ BO_  "TpApplType" STRING ;
+BA_DEF_ BO_  "NmMessage" ENUM  "No","Yes";
+BA_DEF_ BO_  "DiagState" ENUM  "No","Yes";
+BA_DEF_ BO_  "DiagRequest" ENUM  "No","Yes";
+BA_DEF_ BO_  "DiagResponse" ENUM  "No","Yes";
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "Cyclic","CA","CE","Event","NotUsed","NotUsed","NotUsed","IfActive","NoMsgSendType","NotUsed";
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 10000;
+BA_DEF_ BO_  "GenMsgCycleTimeFast" INT 0 100000;
+BA_DEF_ BO_  "GenMsgNrOfRepetition" INT 0 100;
+BA_DEF_ BO_  "GenMsgDelayTime" INT 0 1000;
+BA_DEF_ BO_  "GenMsgILSupport" ENUM  "No","Yes";
+BA_DEF_ BO_  "GenMsgStartDelayTime" INT 0 100000;
+BA_DEF_ BU_  "NmStationAddress" HEX 0 255;
+BA_DEF_ BU_  "NmNode" ENUM  "No","Yes";
+BA_DEF_ BU_  "NodeLayerModules" STRING ;
+BA_DEF_  "DBName" STRING ;
+BA_DEF_  "Manufacturer" STRING ;
+BA_DEF_  "NmType" STRING ;
+BA_DEF_  "NmBaseAddress" HEX 0 1279;
+BA_DEF_DEF_  "GenSigTimeoutTime_BMU" 0;
+BA_DEF_DEF_  "GenSigSendType" "OnWrite";
+BA_DEF_DEF_  "GenSigInactiveValue" 0;
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_DEF_DEF_  "GenMsgFastOnStart" 0;
+BA_DEF_DEF_  "TpTxIndex" 0;
+BA_DEF_DEF_  "TpApplType" "";
+BA_DEF_DEF_  "NmMessage" "No";
+BA_DEF_DEF_  "DiagState" "No";
+BA_DEF_DEF_  "DiagRequest" "No";
+BA_DEF_DEF_  "DiagResponse" "No";
+BA_DEF_DEF_  "GenMsgSendType" "NoMsgSendType";
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "GenMsgCycleTimeFast" 0;
+BA_DEF_DEF_  "GenMsgNrOfRepetition" 0;
+BA_DEF_DEF_  "GenMsgDelayTime" 0;
+BA_DEF_DEF_  "GenMsgILSupport" "Yes";
+BA_DEF_DEF_  "GenMsgStartDelayTime" 0;
+BA_DEF_DEF_  "NmStationAddress" 0;
+BA_DEF_DEF_  "NmNode" "Yes";
+BA_DEF_DEF_  "NodeLayerModules" "";
+BA_DEF_DEF_  "DBName" "";
+BA_DEF_DEF_  "Manufacturer" "CATL";
+BA_DEF_DEF_  "NmType" "None";
+BA_DEF_DEF_  "NmBaseAddress" 1024;
+BA_ "DBName" "CATL_Protocol_ACAN_V31_190710";
+BA_ "GenMsgDelayTime" BO_ 2566866420 0;
+BA_ "GenMsgDelayTime" BO_ 2566897978 0;
+BA_ "GenSigTimeoutTime_BMU" SG_ 2566866420 B2TRQSetModeA 10000;
+BA_ "GenSigStartValue" SG_ 2566866420 B2TRQSetModeA 0;
+BA_ "GenSigTimeoutTime_BMU" SG_ 2566866420 B2TRQHVA 10000;
+BA_ "GenSigStartValue" SG_ 2566866420 B2TRQHVA 0;
+BA_ "GenSigTimeoutTime_BMU" SG_ 2566866420 B2TChgSTA 10000;
+BA_ "GenSigStartValue" SG_ 2566866420 B2TChgSTA 0;
+BA_ "GenSigTimeoutTime_BMU" SG_ 2566866420 B2TBMSHVRelaySTA 10000;
+BA_ "GenSigStartValue" SG_ 2566866420 B2TBMSHVRelaySTA 0;
+BA_ "GenSigTimeoutTime_BMU" SG_ 2566866420 B2TBMSHVVoltA 10000;
+BA_ "GenSigStartValue" SG_ 2566866420 B2TBMSHVVoltA 0;
+BA_ "GenSigTimeoutTime_BMU" SG_ 2566866420 B2TBMSR1 10000;
+BA_ "GenSigStartValue" SG_ 2566866420 B2TBMSR1 0;
+BA_ "GenSigTimeoutTime_BMU" SG_ 2566866420 B2TSetTempA 10000;
+BA_ "GenSigStartValue" SG_ 2566866420 B2TSetTempA 40;
+BA_ "GenSigTimeoutTime_BMU" SG_ 2566866420 B2TBMSR2 10000;
+BA_ "GenSigStartValue" SG_ 2566866420 B2TBMSR2 0;
+BA_ "GenSigTimeoutTime_BMU" SG_ 2566866420 B2TMBMSALIVA 10000;
+BA_ "GenSigStartValue" SG_ 2566866420 B2TMBMSALIVA 0;
+BA_ "GenSigTimeoutTime_BMU" SG_ 2566866420 B2TMCRCA 10000;
+BA_ "GenSigStartValue" SG_ 2566866420 B2TMCRCA 0;
+BA_ "GenSigTimeoutTime_BMU" SG_ 2566897978 T2BWorkStatusA 10000;
+BA_ "GenSigStartValue" SG_ 2566897978 T2BWorkStatusA 0;
+BA_ "GenSigTimeoutTime_BMU" SG_ 2566897978 T2BTMSHVRelaySTA 10000;
+BA_ "GenSigStartValue" SG_ 2566897978 T2BTMSHVRelaySTA 0;
+BA_ "GenSigTimeoutTime_BMU" SG_ 2566897978 TM2BInfoReserved1 10000;
+BA_ "GenSigStartValue" SG_ 2566897978 TM2BInfoReserved1 0;
+BA_ "GenSigTimeoutTime_BMU" SG_ 2566897978 TM2BOutletTempA 10000;
+BA_ "GenSigStartValue" SG_ 2566897978 TM2BOutletTempA 40;
+BA_ "GenSigTimeoutTime_BMU" SG_ 2566897978 TM2BInletTempA 10000;
+BA_ "GenSigStartValue" SG_ 2566897978 TM2BInletTempA 40;
+BA_ "GenSigTimeoutTime_BMU" SG_ 2566897978 TM2BInfoReserved2 10000;
+BA_ "GenSigStartValue" SG_ 2566897978 TM2BInfoReserved2 0;
+BA_ "GenSigTimeoutTime_BMU" SG_ 2566897978 TM2BRQPowerA 10000;
+BA_ "GenSigStartValue" SG_ 2566897978 TM2BRQPowerA 0;
+BA_ "GenSigTimeoutTime_BMU" SG_ 2566897978 TM2BFaultCodeA 10000;
+BA_ "GenSigStartValue" SG_ 2566897978 TM2BFaultCodeA 0;
+BA_ "GenSigTimeoutTime_BMU" SG_ 2566897978 TM2BFaultLevelA 10000;
+BA_ "GenSigStartValue" SG_ 2566897978 TM2BFaultLevelA 0;
+VAL_ 2566866420 B2TRQSetModeA 0 "Shutdown Mode" 1 "Cooling Mode" 2 "Heat Mode" 3 "Self-Loop Mode" ;
+VAL_ 2566866420 B2TRQHVA 0 "HV On Request" 1 "HV Off Request" 2 "Invalid" 3 "Invalid" ;
+VAL_ 2566866420 B2TChgSTA 0 "Non-Charging mode" 1 " Charging mode" 2 "Invalid" 3 "Invalid" ;
+VAL_ 2566866420 B2TBMSHVRelaySTA 0 "Open" 1 "Closed" 2 "Invalid" 3 "Invalid" ;
+VAL_ 2566866420 B2TBMSHVVoltA 65535 "Invalid" ;
+VAL_ 2566897978 T2BWorkStatusA 0 "Shutdown Mode" 1 "Cooling Mode" 2 "Heat Mode" 3 "Self-Loop Mode" ;
+VAL_ 2566897978 T2BTMSHVRelaySTA 0 "Open" 1 "Close" ;
+VAL_ 2566897978 TM2BOutletTempA 255 "Invalid" ;
+VAL_ 2566897978 TM2BInletTempA 255 "Invalid" ;
+VAL_ 2566897978 TM2BRQPowerA 65535 "Invalid" ;
+VAL_ 2566897978 TM2BFaultCodeA 0 "No fault" 1 "Bus under voltage,Level 1 Fault" 2 "Bus over voltage,Level 1 Fault" 3 "Over current,Level 2 Fault" 4 "Inner Communication abnormal,Level 1 Fault" 5 "Lost speed,Level 2 Fault" 6 "Abnormal,Level 2 Fault" 7 "System pressure protect,Level 2 Fault" 8 "Prevent freezing protect,Level 2 Fault" 9 "Outlet temperature sensor abnormal,Level 2 Fault" 10 "Inlet temperature sensor abnormal,Level 2 Fault" 11 "Prevent freezing temperature sensor abnormal,Level 2 Fault" 12 "Water pump fault,Level 1 Fault" 13 "PTC Fault, Level 1 Fault" 14 "CAN communication abnormal,Level 1 Fault" 15 "Vent temperature protect,Level 2 Fault" 16 "Vent temperature sensor abnormal,Level 2 Fault" 17 "Environment temperature sensor abnormal,Level 2 Fault" ;
+VAL_ 2566897978 TM2BFaultLevelA 1 "Level 1 Fault" 2 "Level 2 Fault" 3 "Level 3 Fault" ;
+

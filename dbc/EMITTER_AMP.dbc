@@ -1,0 +1,259 @@
+VERSION "DBC_EMITTER_AMP"
+
+
+NS_ :
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_:
+
+
+BO_ 2566849428 PAS_STATUS: 8 Vector__XXX
+ SG_ Audio_Recorder_Status : 47|4@0+ (1,0) [0|15] "" Vector__XXX
+ SG_ PAS_Status : 43|4@0+ (1,0) [0|15] "" Vector__XXX
+ SG_ Speaker_Amplifier_Error_Flag : 27|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Speaker_Amplifier_Warning_Flag : 26|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Temperature_Sensor_Malfunction : 25|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ PAS_Temperature_Too_High_Flag : 24|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ AUX_2_Clipping_Flag : 23|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ AUX_1_Clipping_Flag : 22|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Microphone_2_Clipping_Flag : 21|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Microphone_1_Clipping_Flag : 20|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ High_Side_Switch_2_Open_Load : 19|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ High_Side_Switch_1_Open_Load : 18|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ High_Side_Switch_2_Overload : 17|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ High_Side_Switch_1_Overload : 16|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Player_B_Right_Playing_Flag : 11|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Player_B_Left_Playing_Flag : 10|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Player_A_Right_Playing_Flag : 9|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Player_A_Left_Playing_Flag : 8|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ OEM_Horn_Control_State : 4|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Microphone_2_PTT_State : 2|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ OEM_Horn_Button_State : 3|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Microphone_1_PTT_State : 1|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Digital_Input_State : 0|1@0+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 2566849684 PAS_TRACK_LIST: 8 Vector__XXX
+ SG_ PAS_Track_List : 7|16@0+ (1,0) [0|65535] "" Vector__XXX
+
+BO_ 2566849685 PAS_GAIN: 8 Vector__XXX
+ SG_ Aux_Input_2_Gain : 31|8@0+ (3,-12) [-12|60] "" Vector__XXX
+ SG_ Aux_Input_1_Gain : 23|8@0+ (3,-12) [-12|60] "" Vector__XXX
+ SG_ Microphone_Input_2_Gain : 15|8@0+ (0.75,-12) [-12|55.5] "" Vector__XXX
+ SG_ Microphone_Input_1_Gain : 7|8@0+ (0.75,-12) [-12|55.5] "" Vector__XXX
+
+BO_ 2566849429 PAS_VOLUME: 8 Vector__XXX
+ SG_ Master_Volume : 63|8@0+ (1,0) [0|100] "" Vector__XXX
+ SG_ Player_B_Volume : 55|8@0+ (1,0) [0|100] "" Vector__XXX
+ SG_ Player_A_Volume : 47|8@0+ (1,0) [0|100] "" Vector__XXX
+ SG_ RS485_Volume : 39|8@0+ (1,0) [0|100] "" Vector__XXX
+ SG_ Aux_Input_2_Volume : 31|8@0+ (1,0) [0|100] "" Vector__XXX
+ SG_ Aux_Input_1_Volume : 23|8@0+ (1,0) [0|100] "" Vector__XXX
+ SG_ Microphone_Input_2_Volume : 15|8@0+ (1,0) [0|100] "" Vector__XXX
+ SG_ Microphone_Input_1_Volume : 7|8@0+ (1,0) [0|100] "" Vector__XXX
+
+BO_ 2365522581 PAS_PLAYER_B_CONFIG: 8 Vector__XXX
+ SG_ Player_B_Right_Track_Delay : 39|32@0+ (1,0) [0|4294967295] "" Vector__XXX
+ SG_ Player_B_Right_Track_Number : 15|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ Player_B_Right_Replay : 19|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Player_B_Right_Loop_Enable : 17|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Player_B_Left_Track_Number : 7|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ Player_B_Left_Replay : 18|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Player_B_Left_Loop_Enable : 16|1@0+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 2365522325 PAS_PLAYER_A_CONFIG: 8 Vector__XXX
+ SG_ Player_A_Right_Track_Delay : 39|32@0+ (1,0) [0|4294967295] "" Vector__XXX
+ SG_ Player_A_Right_Replay : 19|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Player_A_Left_Replay : 18|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Player_A_Right_Loop_Enable : 16|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Player_A_Left_Loop_Enable : 17|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Player_A_Right_Track_Number : 15|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ Player_A_Left_Track_Number : 7|8@0+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2365522069 PAS_CONFIG: 8 Vector__XXX
+ SG_ Audio_Source : 15|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ Audio_Recorder_Erase_Memory : 5|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Audio_Recorder_Start_Stop : 4|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ High_Side_Switch_Output_2_Enable : 3|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ High_Side_Switch_Output_1_Enable : 2|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ OEM_Horn_Disable : 1|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Audio_Power_Enable : 0|1@0+ (1,0) [0|1] "" Vector__XXX
+
+
+
+CM_ SG_ 2566849428 Audio_Recorder_Status "0 = Init
+1 = Empty
+2 = Recording
+3 = Full, Audio recorder memory is full
+4 = Playing
+5 = Erasing";
+CM_ SG_ 2566849428 PAS_Status "0 = Error, there is error, PAS cannot continue to operate
+1 = Warning, there are issues, but PAS can continue to operate
+2 = Operational, PAS is operational";
+CM_ SG_ 2566849428 Speaker_Amplifier_Error_Flag "0 = Speaker amplifier error is de-asserted
+1 = Speaker amplifier error is asserted";
+CM_ SG_ 2566849428 Speaker_Amplifier_Warning_Flag "0 = Speaker amplifier warning is de-asserted
+1 = Speaker amplifier warning is asserted";
+CM_ SG_ 2566849428 Temperature_Sensor_Malfunction "0 = Temperature sensor is working
+1 = Temperature sensor has malfunction";
+CM_ SG_ 2566849428 PAS_Temperature_Too_High_Flag "0 = PAS temperature is not too high
+1 = PAS temperature is too high";
+CM_ SG_ 2566849428 AUX_2_Clipping_Flag "0 = Speaker/Line input 2 is not clipping
+1 = Speaker/Line input 2 is clipping";
+CM_ SG_ 2566849428 AUX_1_Clipping_Flag "0 = Speaker/Line input 1 is not clipping
+1 = Speaker/Line input 1 is clipping";
+CM_ SG_ 2566849428 Microphone_2_Clipping_Flag "0 = Microphone input 2 is not clipping
+1 = Microphone input 2 is clipping";
+CM_ SG_ 2566849428 Microphone_1_Clipping_Flag "0 = Microphone input 1 is not clipping
+1 = Microphone input 1 is clipping";
+CM_ SG_ 2566849428 High_Side_Switch_2_Open_Load "0 = High side switch output 2 has load
+1 = High side switch output 2 has no load";
+CM_ SG_ 2566849428 High_Side_Switch_1_Open_Load "0 = High side switch output 1 has load
+1 = High side switch output 1 has no load";
+CM_ SG_ 2566849428 High_Side_Switch_2_Overload "0 = High side switch output 2 is not overloaded
+1 = High side switch output 2 is overloaded";
+CM_ SG_ 2566849428 High_Side_Switch_1_Overload "0 = High side switch output 1 is not overloaded
+1 = High side switch output 1 is overloaded";
+CM_ SG_ 2566849428 Player_B_Right_Playing_Flag "0 = Player B right is stopped
+1 = Player B right is playing";
+CM_ SG_ 2566849428 Player_B_Left_Playing_Flag "0 = Player B left is stopped
+1 = Player B left is playing";
+CM_ SG_ 2566849428 Player_A_Right_Playing_Flag "0 = Player A right is stopped
+1 = Player A right is playing";
+CM_ SG_ 2566849428 Player_A_Left_Playing_Flag "0 = Player A left is stopped
+1 = Player A left is playing";
+CM_ SG_ 2566849428 OEM_Horn_Control_State "0 = Configured OEM horn logic is active low
+1 = Configured OEM horn logic is active high";
+CM_ SG_ 2566849428 Microphone_2_PTT_State "0 = PTT 2 is released
+1 = PTT 2 is pressed";
+CM_ SG_ 2566849428 OEM_Horn_Button_State "0 = OEM horn button is released
+1 = OEM horn button is pressed";
+CM_ SG_ 2566849428 Microphone_1_PTT_State "0 = PTT 1 is released
+1 = PTT 1 is pressed";
+CM_ SG_ 2566849428 Digital_Input_State "0 = Digital input logic level is low
+1 = Digital input logic level is high";
+CM_ SG_ 2566849684 PAS_Track_List "Audio Track List ID:
+0 = ERROR
+1 = HORN
+2 = HI-LO
+3 = PHASER
+4 = WAIL
+5 = YELP
+6 = Play Recorded Audio";
+CM_ SG_ 2566849685 Aux_Input_2_Gain "3 dB per bit, Offset = -12dB";
+CM_ SG_ 2566849685 Aux_Input_1_Gain "3 dB per bit, Offset = -12dB";
+CM_ SG_ 2566849685 Microphone_Input_2_Gain "0.75 dB per bit, Offset = -12dB";
+CM_ SG_ 2566849685 Microphone_Input_1_Gain "0.75 dB per bit, Offset = -12dB";
+CM_ SG_ 2566849429 Master_Volume "1% per bit";
+CM_ SG_ 2566849429 Player_B_Volume "1% per bit";
+CM_ SG_ 2566849429 Player_A_Volume "1% per bit";
+CM_ SG_ 2566849429 RS485_Volume "1% per bit";
+CM_ SG_ 2566849429 Aux_Input_2_Volume "1% per bit";
+CM_ SG_ 2566849429 Aux_Input_1_Volume "1% per bit";
+CM_ SG_ 2566849429 Microphone_Input_2_Volume "1% per bit";
+CM_ SG_ 2566849429 Microphone_Input_1_Volume "1% per bit";
+CM_ SG_ 2365522581 Player_B_Right_Track_Delay "1 Sample per bit (default 1000 samples/bit)
+(usually used for dual or mix sound function)";
+CM_ SG_ 2365522581 Player_B_Right_Track_Number "Track #:
+0 = Not Used
+1 = HORN
+2 = HI-LO
+3 = PHASER
+4 = WAIL
+5 = YELP
+6 = Play Recorded Audio";
+CM_ SG_ 2365522581 Player_B_Right_Replay "0 = No action
+1 = Player B right replay";
+CM_ SG_ 2365522581 Player_B_Right_Loop_Enable "0 = Player B right loop is disabled
+1 = Player B right loop is enabled";
+CM_ SG_ 2365522581 Player_B_Left_Track_Number "Track #:
+0 = Not Used
+1 = HORN
+2 = HI-LO
+3 = PHASER
+4 = WAIL
+5 = YELP
+6 = Play Recorded Audio";
+CM_ SG_ 2365522581 Player_B_Left_Replay "0 = No action
+1 = Player B left replay";
+CM_ SG_ 2365522581 Player_B_Left_Loop_Enable "0 = Player B left loop is disabled
+1 = Player B left loop is enabled";
+CM_ SG_ 2365522325 Player_A_Right_Track_Delay "1 Sample per bit (default 1000 samples/bit)
+(usually used for dual or mix sound function)";
+CM_ SG_ 2365522325 Player_A_Right_Replay "0 = No action
+1 = Player A right replay";
+CM_ SG_ 2365522325 Player_A_Left_Replay "0 = No action
+1 = Player A left replay";
+CM_ SG_ 2365522325 Player_A_Right_Loop_Enable "0 = Player A right loop is disabled
+1 = Player A right loop is enabled";
+CM_ SG_ 2365522325 Player_A_Left_Loop_Enable "0 = Player A left loop is disabled
+1 = Player A left loop is enabled";
+CM_ SG_ 2365522325 Player_A_Right_Track_Number "Track #:
+0 = Not Used
+1 = HORN
+2 = HI-LO
+3 = PHASER
+4 = WAIL
+5 = YELP
+6 = Play Recorded Audio";
+CM_ SG_ 2365522325 Player_A_Left_Track_Number "Track #:
+0 = Not Used
+1 = HORN
+2 = HI-LO
+3 = PHASER
+4 = WAIL
+5 = YELP
+6 = Play Recorded Audio";
+CM_ SG_ 2365522069 Audio_Source "0 = Muted
+1 = Microphone Input 1
+2 = Microphone Input 2
+3 = Speaker/Line Input 1
+4 = Speaker/Line Input 2
+5 = RS-485 (for future use)
+6 = Player A
+7 = Player B";
+CM_ SG_ 2365522069 Audio_Recorder_Erase_Memory "0 = No action
+1 = Start erase memory operation";
+CM_ SG_ 2365522069 Audio_Recorder_Start_Stop "0 = Audio recorder is not recording
+1 = Audio recorder is recording (max. record time is 30s)";
+CM_ SG_ 2365522069 High_Side_Switch_Output_2_Enable "0 = High side switch output 1 is disabled
+1 = High side switch output 1 is enabled";
+CM_ SG_ 2365522069 High_Side_Switch_Output_1_Enable "0 = High side switch output 1 is disabled
+1 = High side switch output 1 is enabled";
+CM_ SG_ 2365522069 OEM_Horn_Disable "0 = OEM horn is enabled, OEM horn relay is closed
+1 = OEM horn is disabled, OEM horn relay is open";
+CM_ SG_ 2365522069 Audio_Power_Enable "0 = Audio power is disabled
+1 = Audio power is enabled";
+BA_DEF_  "MultiplexExtEnabled" ENUM  "No","Yes";
+BA_DEF_  "BusType" STRING ;
+BA_DEF_DEF_  "MultiplexExtEnabled" "No";
+BA_DEF_DEF_  "BusType" "CAN";
+

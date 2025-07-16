@@ -1,0 +1,98 @@
+VERSION "DBC_LIGHTS_RELAIS_REAR"
+
+
+NS_ :
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_:
+
+
+BO_ 2566910785 LIGHT_FAULT_STATUS: 8 Vector__XXX
+ SG_ EOT_STATUS : 3|1@1+ (1,0) [0|1] "Binary" Vector__XXX
+ SG_ DITCH_STATUS : 2|1@1+ (1,0) [0|1] "Binary" Vector__XXX
+ SG_ IND_STATUS : 1|1@1+ (1,0) [0|1] "Binary" Vector__XXX
+ SG_ HDL_STATUS : 0|1@1+ (1,0) [0|1] "Binary" Vector__XXX
+
+BO_ 2566910806 MRS_SCENE_CMD: 8 Vector__XXX
+ SG_ SCENE_CMD_3 : 3|1@1+ (1,0) [0|1] "Binary" Vector__XXX
+ SG_ SCENE_CMD_2 : 2|1@1+ (1,0) [0|1] "Binary" Vector__XXX
+ SG_ SCENE_CMD_1 : 1|1@1+ (1,0) [0|1] "Binary" Vector__XXX
+ SG_ SCENE_CMD_0 : 0|1@1+ (1,0) [0|1] "Binary" Vector__XXX
+
+BO_ 2566910774 MRS_CAN_RELAY_STATUS: 8 Vector__XXX
+ SG_ RELAY_STATUS_1 : 0|1@1+ (1,0) [0|1] "Binary" Vector__XXX
+ SG_ RELAY_STATUS_2 : 1|1@1+ (1,0) [0|1] "Binary" Vector__XXX
+ SG_ RELAY_STATUS_3 : 2|1@1+ (1,0) [0|1] "Binary" Vector__XXX
+ SG_ RELAY_STATUS_4 : 3|1@1+ (1,0) [0|1] "Binary" Vector__XXX
+ SG_ RELAY_STATUS_5 : 4|1@1+ (1,0) [0|1] "Binary" Vector__XXX
+ SG_ RELAY_STATUS_6 : 5|1@1+ (1,0) [0|1] "Binary" Vector__XXX
+ SG_ RELAY_STATUS_7 : 6|1@1+ (1,0) [0|1] "Binary" Vector__XXX
+ SG_ RELAY_STATUS_8 : 7|1@1+ (1,0) [0|1] "Binary" Vector__XXX
+ SG_ RELAY_STATUS_9 : 8|1@1+ (1,0) [0|1] "Binary" Vector__XXX
+ SG_ RELAY_STATUS_10 : 9|1@1+ (1,0) [0|1] "Binary" Vector__XXX
+ SG_ RELAY_STATUS_11 : 10|1@1+ (1,0) [0|1] "Binary" Vector__XXX
+ SG_ RELAY_STATUS_12 : 11|1@1+ (1,0) [0|1] "Binary" Vector__XXX
+
+BO_ 2566910775 MRS_ANALOG_STATUS_1_4: 8 Vector__XXX
+ SG_ ANALOG_IN_STATUS_1 : 0|16@1+ (0.0002,0) [0|11.34] "V" Vector__XXX
+ SG_ ANALOG_IN_STATUS_2 : 16|16@1+ (0.0002,0) [0|11.34] "V" Vector__XXX
+ SG_ ANALOG_IN_STATUS_3 : 32|16@1+ (0.0002,0) [0|11.34] "V" Vector__XXX
+ SG_ ANALOG_IN_STATUS_4 : 48|16@1+ (0.0002,0) [0|11.34] "V" Vector__XXX
+
+BO_ 2566910776 MRS_ANALOG_STATUS_5_8: 8 Vector__XXX
+ SG_ ANALOG_IN_STATUS_5 : 0|16@1+ (0.0002,0) [0|11.34] "V" Vector__XXX
+ SG_ ANALOG_IN_STATUS_6 : 16|16@1+ (0.0002,0) [0|11.34] "V" Vector__XXX
+ SG_ ANALOG_IN_STATUS_7 : 32|16@1+ (0.0002,0) [0|11.34] "V" Vector__XXX
+ SG_ ANALOG_IN_STATUS_8 : 48|16@1+ (0.0002,0) [0|11.34] "V" Vector__XXX
+
+
+
+BA_DEF_ BO_  "VFrameFormat" ENUM  "StandardCAN","ExtendedCAN","reserved","J1939PG";
+BA_DEF_  "DatabaseVersion" STRING ;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_  "ProtocolType" STRING ;
+BA_DEF_  "DatabaseCompiler" STRING ;
+BA_DEF_DEF_  "VFrameFormat" "J1939PG";
+BA_DEF_DEF_  "DatabaseVersion" "DEMO PLUS";
+BA_DEF_DEF_  "BusType" "";
+BA_DEF_DEF_  "ProtocolType" "";
+BA_DEF_DEF_  "DatabaseCompiler" "";
+BA_ "DatabaseVersion" "1.0.0";
+BA_ "DatabaseCompiler" "CSS ELECTRONICS (WWW.CSSELECTRONICS.COM)";
+BA_ "BusType" "CAN";
+BA_ "ProtocolType" "J1939";
+BA_ "VFrameFormat" BO_ 2566910785 1;
+BA_ "VFrameFormat" BO_ 2566910806 1;
+BA_ "VFrameFormat" BO_ 2566910774 1;
+BA_ "VFrameFormat" BO_ 2566910775 1;
+BA_ "VFrameFormat" BO_ 2566910776 1;
+

@@ -1,0 +1,161 @@
+VERSION "DBC_CSI_OBC"
+
+
+NS_ :
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: BMS OBCM
+VAL_TABLE_ ACPBaseState 5 "Error" 4 "Powerup" 2 "Enable" 0 "Ready" ;
+VAL_TABLE_ ACPExTState 7 "undefined" 6 "undefined" 5 "undefined" 4 "OverCurrent" 3 "OverVoltage" 2 "TempWarning" 1 "LowVoltageWarning" 0 "RunningFailure" ;
+VAL_TABLE_ ACPFailGrade 3 "undefined" 2 "1 level failure" 1 "2 level failure" 0 "no error" ;
+VAL_TABLE_ Communication_command_control 34 "Restart send message (No UDS)" 17 "Stop send message (No UDS)" ;
+VAL_TABLE_ CompressorRequest 3 "Reserved" 2 "Request ON" 1 "Request OFF" 0 "No request" ;
+VAL_TABLE_ Get_ECU_version_of_supplier 187 "Req supplier information (BMS)" 186 "Reserved" 170 "Request version information" ;
+
+
+BO_ 2550588916 BMS_OBCM: 8 BMS
+ SG_ BMS_VoltageSet : 7|16@0+ (0.1,0) [0|6554] "V"  OBCM
+ SG_ BMS_CurrentSet : 23|16@0+ (0.1,0) [0|6554] "A"  OBCM
+ SG_ BMS_ChargeControl : 39|8@0+ (1,0) [0|255] ""  OBCM
+
+BO_ 2499756848 EVCC_AC_State: 8 BMS
+ SG_ EVCC_CpStatusSet : 18|3@0+ (1,0) [0|7] "" Vector__XXX
+ SG_ EVCC_CcStatusSet : 21|3@0+ (1,0) [0|7] "" Vector__XXX
+ SG_ EVCC_CpDutySet : 31|8@0+ (1,0) [0|100] "%" Vector__XXX
+
+BO_ 2566869221 OBCM_BMS_STATE1: 8 OBCM
+ SG_ OBC_ChargerVoltage : 7|16@0+ (0.1,0) [0|6554] "V" Vector__XXX
+ SG_ OBC_ChargerCurrent : 23|16@0+ (0.1,0) [0|6554] "A" Vector__XXX
+ SG_ OBC_HardwareStatus : 32|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ OBC_TempAnomaly : 33|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ OBC_ACVoltageAnomaly : 34|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ OBC_StartStatus : 35|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ OBC_ComOvertime : 36|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ OBC_BatteryConnectStatus : 37|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ OBC_CC_Status : 38|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ OBC_CP_Status : 39|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ OBC_Temperature : 47|8@0+ (1,-40) [-40|215] "��" Vector__XXX
+ SG_ OBC_SoftVersion : 55|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ OBC_HardwareVersion : 63|8@0+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2566803685 OBCM_BMS_STATE2: 8 OBCM
+ SG_ OBC_ACVoltage_Input : 7|16@0+ (0.1,0) [0|6554] "V" Vector__XXX
+ SG_ OBC_PFCVoltage : 23|16@0+ (0.1,0) [0|6554] "V" Vector__XXX
+ SG_ OBC_CurrentLimit : 39|8@0+ (0.2,0) [0|51.2] "A" Vector__XXX
+ SG_ OBC_BatteryVoltage : 47|16@0+ (0.1,0) [0|6554] "V" Vector__XXX
+ SG_ OBC_SystemStatus : 59|4@0+ (1,0) [0|15] "" Vector__XXX
+ SG_ OBC_ErrorFlag : 63|4@0+ (1,0) [0|15] "" Vector__XXX
+
+BO_ 2566738149 OBCM_BMS_STATE3: 8 OBCM
+ SG_ OBC_ACCurrent_Input : 7|16@0+ (0.1,0) [0|6554] "A" Vector__XXX
+ SG_ OBC_ChargingPiletMaxCurrt : 23|16@0+ (0.0078125,0) [0|80] "A" Vector__XXX
+ SG_ OBC_ChargePortTemp1 : 39|8@0+ (1,-40) [-40|215] "��" Vector__XXX
+ SG_ OBC_ChargePortTemp2 : 47|8@0+ (1,-40) [-40|215] "��" Vector__XXX
+ SG_ OBC_CP_Duty : 55|8@0+ (1,0) [0|100] "%" Vector__XXX
+ SG_ BMS_LockSt : 56|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ OBC_S2_STATUS : 57|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ OBC_BMS_WakeStatus : 58|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ OBC_CC_Status3 : 63|3@0+ (1,0) [0|2] "" Vector__XXX
+
+
+
+CM_ BU_ BMS "��ع���ϵͳ";
+CM_ BU_ OBCM "OBC����";
+CM_ BO_ 2550588916 "BMS�·���������";
+CM_ SG_ 2550588916 BMS_VoltageSet "OBC����ѹ";
+CM_ SG_ 2550588916 BMS_CurrentSet "OBC������";
+CM_ SG_ 2550588916 BMS_ChargeControl "��������ָ��";
+CM_ BO_ 2499756848 "EVCC�·�CC��CP";
+CM_ SG_ 2499756848 EVCC_CpStatusSet "CP״̬";
+CM_ SG_ 2499756848 EVCC_CcStatusSet "CC״̬";
+CM_ SG_ 2499756848 EVCC_CpDutySet "CPռ�ձ�";
+CM_ BO_ 2566869221 "OBC״̬1�ϱ�";
+CM_ SG_ 2566869221 OBC_ChargerVoltage "����ѹ";
+CM_ SG_ 2566869221 OBC_ChargerCurrent "������";
+CM_ SG_ 2566869221 OBC_HardwareStatus "Ӳ������";
+CM_ SG_ 2566869221 OBC_TempAnomaly "�����¶�״̬";
+CM_ SG_ 2566869221 OBC_ACVoltageAnomaly "�����ѹ״̬";
+CM_ SG_ 2566869221 OBC_StartStatus "����״̬";
+CM_ SG_ 2566869221 OBC_ComOvertime "ͨ�ų�ʱ";
+CM_ SG_ 2566869221 OBC_BatteryConnectStatus "�������״̬";
+CM_ SG_ 2566869221 OBC_CC_Status "CC״̬";
+CM_ SG_ 2566869221 OBC_CP_Status "CP״̬";
+CM_ SG_ 2566869221 OBC_Temperature "OBC�¶�";
+CM_ SG_ 2566869221 OBC_SoftVersion "�����汾";
+CM_ SG_ 2566869221 OBC_HardwareVersion "Ӳ���汾";
+CM_ BO_ 2566803685 "OBC״̬2�ϱ�";
+CM_ SG_ 2566803685 OBC_ACVoltage_Input "AC�����ѹ";
+CM_ SG_ 2566803685 OBC_PFCVoltage "PFC��ѹ";
+CM_ SG_ 2566803685 OBC_CurrentLimit "�޶�����";
+CM_ SG_ 2566803685 OBC_BatteryVoltage "��ص�ѹ";
+CM_ SG_ 2566803685 OBC_SystemStatus "OBCϵͳ״̬";
+CM_ SG_ 2566803685 OBC_ErrorFlag "�����־
+����Ϊ�ɻָ����ϣ�
+1��FAULT_OTP_RT,         //�����¶ȹ���
+2��  FAULT_OTP_ALL,     //�ڲ��¶ȹ���
+3�� FAULT_OUT_OC,       //�������
+4�� FAULT_COMM_OUT,  //ͨ�ų�ʱ
+5�� FAULT_IN_UV,            //����Ƿѹ
+6�� FAULT_IN_OV,           //�����ѹ
+����Ϊ��������
+8��FAULT_PFC_OV,       //PFC��ѹ
+9��FAULT_PFC_UV,       //PFCǷѹ
+10��FAULT_OUT_UV,     //���Ƿѹ
+11��FAULT_OUT_OV,     //�����ѹ";
+CM_ BO_ 2566738149 "OBC״̬3�ϱ�";
+CM_ SG_ 2566738149 OBC_ACCurrent_Input "AC�������";
+CM_ SG_ 2566738149 OBC_ChargingPiletMaxCurrt "���׮���Ƶ���";
+CM_ SG_ 2566738149 OBC_ChargePortTemp1 "�����¶�1";
+CM_ SG_ 2566738149 OBC_ChargePortTemp2 "�����¶�2";
+CM_ SG_ 2566738149 OBC_CP_Duty "CPռ�ձ�";
+CM_ SG_ 2566738149 BMS_LockSt "�����״̬";
+CM_ SG_ 2566738149 OBC_S2_STATUS "S2״̬";
+CM_ SG_ 2566738149 OBC_BMS_WakeStatus "BMS����״̬";
+CM_ SG_ 2566738149 OBC_CC_Status3 "CC״̬������ֵ��";
+VAL_ 2550588916 BMS_ChargeControl 0 "Start charging" 1 "Standby/Pause" 2 "Heating mode" 3 "Complete charging" ;
+VAL_ 2499756848 EVCC_CpStatusSet 0 "��12V" 1 "9V" 2 "PWM_6V" ;
+VAL_ 2499756848 EVCC_CcStatusSet 0 "Coupler connected" 1 "Coupler connected, release latch depressed" 2 "Coupler disconnected" ;
+VAL_ 2566869221 OBC_HardwareStatus 0 "normal" 1 "fault" ;
+VAL_ 2566869221 OBC_TempAnomaly 0 "normal" 1 "fault" ;
+VAL_ 2566869221 OBC_ACVoltageAnomaly 0 "normal" 1 "fault" ;
+VAL_ 2566869221 OBC_StartStatus 0 "Starts the output" 1 "Disable the output" ;
+VAL_ 2566869221 OBC_ComOvertime 0 "normal" 1 "fault" ;
+VAL_ 2566869221 OBC_BatteryConnectStatus 0 "not connected" 1 "connected" ;
+VAL_ 2566869221 OBC_CC_Status 0 "normal" 1 "fault" ;
+VAL_ 2566869221 OBC_CP_Status 0 "normal" 1 "fault" ;
+VAL_ 2566803685 OBC_SystemStatus 0 "initialization" 1 "standby" 2 "constant current charging" 3 "constant voltage charging" 4 "charging is completed" 5 "sleep" 6 "recoverable failure" 7 "lock failure" ;
+VAL_ 2566803685 OBC_ErrorFlag 0 "No Fault" 1 "Charging port_over temperature" 2 "PFC_over temperature" 3 "PFC_over current" 4 "CAN communication fault" 5 "Input_undervoltage" 6 "Input_overvoltage" 7 "PFC_overvoltage" 8 "PFC_undervoltage" 9 "Output_undervoltage" 10 "Output_overvoltage" 11 "LV input_overvoltage" 12 "LV input_undervoltage" 13 "Internal CAN communication fault" 14 "Hardware overcurrent" 15 "Calibration Error" ;
+VAL_ 2566738149 BMS_LockSt 0 "unlocked state" 1 "Locked state" ;
+VAL_ 2566738149 OBC_S2_STATUS 0 "disconnected state" 1 "closed state" ;
+VAL_ 2566738149 OBC_BMS_WakeStatus 0 "Disabled state" 1 "enable state" ;
+VAL_ 2566738149 OBC_CC_Status3 0 "Coupler connected" 1 "Coupler connected, release latch depressed" 2 "Coupler disconnected" ;
+

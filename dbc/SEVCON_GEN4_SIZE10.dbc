@@ -1,0 +1,115 @@
+VERSION "DBC_SEVCON_MC_GEN4_SIZE10"
+
+
+NS_ :
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: Left_Sevcon
+
+
+BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
+ SG_ Tuned_Ke : 0|16@1- (3.0517578125E-005,0) [0|0] "Vrms/rad/s" Vector__XXX
+ SG_ DC_bus_current : 0|16@1- (0.0625,0) [0|0] "A" Vector__XXX
+ SG_ Ud : 0|16@1- (0.0625,0) [0|0] "Vrms" Vector__XXX
+ SG_ Uq : 0|16@1- (0.0625,0) [0|0] "Vrms" Vector__XXX
+
+BO_ 769 Command_RPDO2: 2 Vector__XXX
+ SG_ Max_Torque_Cmd : 0|16@1+ (0.1,0) [0|1000] "%" Vector__XXX
+
+BO_ 0 NMT: 2 Vector__XXX
+ SG_ NMT_node : 8|8@1+ (1,0) [0|0] ""  Left_Sevcon
+ SG_ NMT_command : 0|8@1+ (1,0) [0|0] ""  Left_Sevcon
+
+BO_ 257 Command_RPDO1: 8 Vector__XXX
+ SG_ Torque_demand : 16|16@1- (0.1,0) [0|0] "Nm"  Left_Sevcon
+ SG_ Speed_Limit : 32|32@1+ (1,0) [0|0] "rpm"  Left_Sevcon
+ SG_ Control_word : 0|16@1+ (1,0) [0|0] ""  Left_Sevcon
+
+BO_ 1537 SSDO: 8 Vector__XXX
+ SG_ SDO_sub_index : 24|8@1+ (1,0) [0|0] ""  Left_Sevcon
+ SG_ SDO_index : 8|16@1+ (1,0) [0|0] ""  Left_Sevcon
+ SG_ SDO_data : 32|32@1+ (1,0) [0|0] ""  Left_Sevcon
+ SG_ SDO_config : 0|8@1+ (1,0) [0|0] ""  Left_Sevcon
+
+BO_ 1409 CSDO: 8 Left_Sevcon
+ SG_ SDO_sub_index : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ SDO_index : 8|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ SDO_data : 32|32@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ SDO_config : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 129 Emergency_message: 8 Left_Sevcon
+ SG_ Sevcon_fault_ID : 24|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Sevcon_fault_data : 40|24@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CANopen_error_register : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CANopen_error_code : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1793 Heartbeat: 1 Left_Sevcon
+ SG_ Operational_state : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 341 TPDO5: 8 Left_Sevcon
+ SG_ Target_Iq : 0|16@1- (0.0625,0) [0|0] "Arms" Vector__XXX
+ SG_ Target_Id : 32|16@1- (0.0625,0) [0|0] "Arms" Vector__XXX
+ SG_ Reported_Iq : 16|16@1- (0.0625,0) [0|0] "Arms" Vector__XXX
+ SG_ Reported_Id : 48|16@1- (0.0625,0) [0|0] "Arms" Vector__XXX
+
+BO_ 331 TPDO4: 8 Left_Sevcon
+ SG_ Speed_Limit : 0|32@1+ (1,0) [0|0] "rpm" Vector__XXX
+ SG_ Temperature_torque_scaling : 48|16@1+ (-0.390625,100) [0|0] "%" Vector__XXX
+ SG_ Maximum_Iq : 32|16@1+ (0.0625,0) [0|0] "Arms" Vector__XXX
+
+BO_ 321 TPDO3: 8 Left_Sevcon
+ SG_ Voltage_modulation : 48|16@1- (0.3921568627451,0) [0|0] "%" Vector__XXX
+ SG_ DC_bus_capacitor_voltage : 32|16@1+ (0.0625,0) [0|0] "V" Vector__XXX
+ SG_ Status_word : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Highest_priority_fault : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 311 TPDO2: 8 Left_Sevcon
+ SG_ Control_Word : 0|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ Torque_Actual : 48|16@1- (0.0625,0) [-2048|2047.9375] "Nm" Vector__XXX
+ SG_ Maximum_Torque : 32|16@1- (0.0625,0) [-2048|2047.9375] "Nm" Vector__XXX
+ SG_ Torque_Demand : 16|16@1- (0.0625,0) [-2048|2047.9375] "Nm" Vector__XXX
+
+BO_ 301 TPDO1: 8 Left_Sevcon
+ SG_ Velocity : 32|32@1- (1,0) [-2147483648|2147483647] "RPM" Vector__XXX
+ SG_ Motor_Temperature_1 : 0|16@1- (1,0) [-32768|32767] "C" Vector__XXX
+ SG_ Motor_Temperature_2 : 16|16@1- (1,0) [-32768|32767] "C" Vector__XXX
+
+
+
+CM_ BO_ 3221225472 "This is a message for not used signals, created by Vector CANdb++ DBC OLE DB Provider.";
+BA_DEF_  "BusType" STRING ;
+BA_DEF_DEF_  "BusType" "CAN";
+VAL_ 0 NMT_node 2 "Right" 1 "Left" 0 "All" ;
+VAL_ 0 NMT_command 128 "Set_pre_operational" 1 "Set_operational" ;
+VAL_ 257 Control_word 0 "Disable" 15 "Enable_operation" 7 "Switch_on" 6 "Shutdown" ;
+VAL_ 1793 Operational_state 127 "Pre-operational" 5 "Operational" 4 "Stopped" 0 "Boot-up" ;
+

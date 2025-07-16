@@ -1,0 +1,350 @@
+VERSION "DBC_CSI_PDU"
+
+
+NS_ :
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_:
+
+
+BO_ 2364605392 VCU_EHPS_EAC_DCDC_Demand: 8 Vector__XXX
+ SG_ EHPS_Enable_Demand : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ EAC_Enable_Demand : 2|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ DCDC_Enable_Demand : 4|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ EHPS__Spd_Demand : 24|16@1+ (0.5,-5000) [-5000|27767.5] "rpm" Vector__XXX
+ SG_ EAC_Spd_Demand : 40|16@1+ (0.5,-5000) [-5000|27767.5] "rpm" Vector__XXX
+ SG_ VCU_Life : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ EHPS_control_mode : 6|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ EAC_control_mode : 7|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DCDC_Requested_Output_Voltage : 8|16@1+ (0.1,0) [0|6553.5] "V" Vector__XXX
+
+BO_ 2550255781 EHPS_Status_1: 8 Vector__XXX
+ SG_ EHPS_Work_Status : 12|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ EHPS_Input_Voltage : 16|16@1+ (0.1,0) [0|6553.5] "V" Vector__XXX
+ SG_ EHPS_Motor_Temperature : 32|8@1+ (1,-40) [-40|215] "��" Vector__XXX
+ SG_ EHPS_inverter_Temperature : 48|8@1+ (1,-40) [-40|215] "��" Vector__XXX
+ SG_ EHPS_Life : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ EHPS_Err_Code : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ EHPS_Err_Level : 8|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ EHPSPowerStatus : 10|2@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ EHPS_Fault_Status : 14|2@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 2550321317 EHPS_Status_2: 8 Vector__XXX
+ SG_ EHPS_Motor_Spd : 0|16@1+ (0.5,-5000) [-5000|27767.5] "rpm" Vector__XXX
+ SG_ EHPS_Output_Voltage : 16|16@1+ (1,0) [0|65535] "V" Vector__XXX
+ SG_ EHPS_Output_Current : 32|16@1+ (0.1,0) [0|6553.5] "A" Vector__XXX
+ SG_ EHPS_Input_Current : 48|16@1+ (0.1,0) [0|6553.5] "A" Vector__XXX
+
+BO_ 2550255782 EAC_Status_1: 8 Vector__XXX
+ SG_ EAC_Err_Code : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ EAC_Err_Level : 8|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ EAC_Work_Status : 12|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ EAC_Input_Voltage : 16|16@1+ (0.1,0) [0|6553.5] "V" Vector__XXX
+ SG_ EAC_inverter_Temperature : 48|8@1+ (1,-40) [-40|215] "��" Vector__XXX
+ SG_ EAC_Life : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ EACPowerStatus : 10|2@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ EAC_Fault_Status : 14|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ EAC_Motor_Temperature : 32|8@1+ (1,-40) [-40|215] "��" Vector__XXX
+
+BO_ 2550321318 EAC_Status_2: 8 Vector__XXX
+ SG_ EAC_Motor_Spd : 0|16@1+ (0.5,-5000) [-5000|27767.5] "rpm" Vector__XXX
+ SG_ EAC_Output_Voltage : 16|16@1+ (1,0) [0|65535] "V" Vector__XXX
+ SG_ EAC_Output_Current : 32|16@1+ (0.1,0) [0|6553.5] "A" Vector__XXX
+ SG_ EAC_Input_Current : 48|16@1+ (0.1,0) [0|6553.5] "A" Vector__XXX
+
+BO_ 2550255783 DCDC_Status_1: 8 Vector__XXX
+ SG_ DCDC_Err_Code : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ DCDC_Err_Level : 8|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ DCDC_Work_Status : 12|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ DCDC_Input_Voltage : 16|16@1+ (0.1,0) [0|6553.5] "V" Vector__XXX
+ SG_ DCDC_Input_Current : 32|16@1+ (0.1,0) [0|6553.5] "A" Vector__XXX
+ SG_ DCDC_Temperature : 48|8@1+ (1,-40) [-40|215] "��" Vector__XXX
+ SG_ DCDC_Life : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ DCDCPowerStatus : 10|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ DCDC_Fault_Status : 14|2@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 2550321319 DCDC_Status_2: 8 Vector__XXX
+ SG_ DCDC_Output_Voltage : 16|16@1+ (0.1,0) [0|6553.5] "V" Vector__XXX
+ SG_ DCDC_Output_Current : 32|16@1+ (0.1,0) [0|6553.5] "A" Vector__XXX
+
+BO_ 2364604880 VCU_PDU_Demand_1: 8 Vector__XXX
+ SG_ VCU_MCU_HV_PowerOn_Off_Request : 8|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ VCU_Life : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ VCU_PDU_Auxiliary_Relay_Enable : 10|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ HV2_Relay_Enable : 14|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ HV3_Relay_Enable : 16|2@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 2566062504 PDU_Status_1: 8 Vector__XXX
+ SG_ PDU_SelfChk_Sts : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ PDU_Precharging_Status : 2|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ PDU_MCUPosRly_Sts : 4|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ PDU_MCUPreRly_Sts : 6|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ HV3_Loop_Realy_Sts : 12|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ PDU_Auxiliary_Relay_Sts : 8|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ HV2_Loop_Realy_Sts : 10|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ PDU_Fault_Level : 32|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ PDU_Life : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2566062520 PDU_Status_2: 8 Vector__XXX
+ SG_ PDU_InputVoltage : 0|16@1+ (0.1,0) [0|6553.5] "V" Vector__XXX
+ SG_ PDU_Fault_Code : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2550386855 DCDC_Software_Version: 8 Vector__XXX
+ SG_ DCDC_Vendor_Software_Versions_1 : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ DCDC_Vendor_Software_Versions_2 : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ DCDC_Vendor_Software_Versions_3 : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ DCDC_client_Software_Version_1 : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ DCDC_client_Software_Version_2 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ DCDC_Software_compilation_time_Y : 40|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ DCDC_Software_compilation_time_M : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ DCDC_Software_compilation_time_D : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2550386854 EAC_Software_Version: 8 Vector__XXX
+ SG_ EAC_Vendor_Software_Versions_1 : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ EAC_Vendor_Software_Versions_2 : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ EAC_Vendor_Software_Versions_3 : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ EAC_client_Software_Version_1 : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ EAC_client_Software_Version_2 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ EAC_Software_compilation_time_Ye : 40|8@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ EAC_Software_compilation_time_Mo : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ EAC_Software_compilation_time_Da : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2550386853 EHPS_Software_Version: 8 Vector__XXX
+ SG_ EHPS_Vendor_Software_Versions_1 : 0|8@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ EHPS_Vendor_Software_Versions_2 : 8|8@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ EHPS_Vendor_Software_Versions_3 : 16|8@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ EHPS_client_Software_Version_1 : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ EHPS_client_Software_Version_2 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ EHPS_Software_compilation_time_Y : 40|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ EHPS_Software_compilation_time_M : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ EHPS_Software_compilation_time_D : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2566062536 PDU_Software_Version: 8 Vector__XXX
+ SG_ PDU_Vendor_Software_Versions_1 : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ PDU_Vendor_Software_Versions_2 : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ PDU_Vendor_Software_Versions_3 : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ PDU_client_Software_Version_1 : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ PDU_client_Software_Version_2 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ PDU_Software_compilation_time_Y : 40|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ PDU_Software_compilation_time_M : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ PDU_Software_compilation_time_D : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+
+
+
+CM_ BO_ 2550255781 "EHPS�ͱ�";
+CM_ BO_ 2550255782 "EAC����";
+CM_ BO_ 2550321318 "EAC����";
+CM_ BO_ 2550386855 "DCDC�汾��Ϣ";
+CM_ SG_ 2550386855 DCDC_Vendor_Software_Versions_1 "DCDC���Ұ汾��1";
+CM_ SG_ 2550386855 DCDC_Vendor_Software_Versions_2 "DCDC���Ұ汾��2";
+CM_ SG_ 2550386855 DCDC_Vendor_Software_Versions_3 "DCDC���Ұ汾��3";
+CM_ SG_ 2550386855 DCDC_client_Software_Version_1 "DCDC�ͻ��汾��1";
+CM_ SG_ 2550386855 DCDC_client_Software_Version_2 "DCDC�ͻ��汾��2";
+CM_ SG_ 2550386855 DCDC_Software_compilation_time_Y "DCDC��������ʱ��_��";
+CM_ SG_ 2550386855 DCDC_Software_compilation_time_M "DCDC��������ʱ��_��";
+CM_ SG_ 2550386855 DCDC_Software_compilation_time_D "DCDC��������ʱ��_��";
+CM_ BO_ 2550386854 "���������汾��Ϣ";
+CM_ SG_ 2550386854 EAC_Vendor_Software_Versions_1 "���ó��������汾1";
+CM_ SG_ 2550386854 EAC_Vendor_Software_Versions_2 "���ó��������汾��Ϣ2";
+CM_ SG_ 2550386854 EAC_Vendor_Software_Versions_3 "���ó��������汾3";
+CM_ SG_ 2550386854 EAC_client_Software_Version_1 "���ÿͻ������汾1";
+CM_ SG_ 2550386854 EAC_client_Software_Version_2 "���ÿͻ������汾2";
+CM_ SG_ 2550386854 EAC_Software_compilation_time_Ye "������������ʱ��_��";
+CM_ SG_ 2550386854 EAC_Software_compilation_time_Mo "������������ʱ��_��";
+CM_ SG_ 2550386854 EAC_Software_compilation_time_Da "������������ʱ��_��";
+CM_ BO_ 2550386853 "�ͱ������汾��Ϣ";
+CM_ SG_ 2550386853 EHPS_Vendor_Software_Versions_1 "�ͱó��������汾1";
+CM_ SG_ 2550386853 EHPS_Vendor_Software_Versions_2 "�ͱó��������汾��Ϣ2";
+CM_ SG_ 2550386853 EHPS_Vendor_Software_Versions_3 "�ͱó��������汾��Ϣ3";
+CM_ SG_ 2550386853 EHPS_client_Software_Version_1 "�ͱÿͻ������汾1";
+CM_ SG_ 2550386853 EHPS_client_Software_Version_2 "�ͱÿͻ������汾2";
+CM_ SG_ 2550386853 EHPS_Software_compilation_time_Y "�ͱ���������ʱ��_��";
+CM_ SG_ 2550386853 EHPS_Software_compilation_time_M "�ͱ���������ʱ��_��";
+CM_ SG_ 2550386853 EHPS_Software_compilation_time_D "�ͱ���������ʱ��_��";
+CM_ BO_ 2566062536 "PDU�汾��Ϣ";
+CM_ SG_ 2566062536 PDU_Vendor_Software_Versions_1 "PDU���Ұ汾��1";
+CM_ SG_ 2566062536 PDU_Vendor_Software_Versions_2 "PDU���Ұ汾��2";
+CM_ SG_ 2566062536 PDU_Vendor_Software_Versions_3 "PDU���Ұ汾��3";
+CM_ SG_ 2566062536 PDU_client_Software_Version_1 "PDU�ͻ��汾��1";
+CM_ SG_ 2566062536 PDU_client_Software_Version_2 "PDU�ͻ��汾��2";
+CM_ SG_ 2566062536 PDU_Software_compilation_time_Y "PDU��������ʱ��_��";
+CM_ SG_ 2566062536 PDU_Software_compilation_time_M "PDU��������ʱ��_��";
+CM_ SG_ 2566062536 PDU_Software_compilation_time_D "PDU��������ʱ��_��";
+BA_DEF_  "BusType" STRING ;
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 65535;
+BA_DEF_ SG_  "GenSigStartValue" FLOAT -3.4E+038 3.4E+038;
+BA_DEF_DEF_  "BusType" "CAN";
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_ "BusType" "CAN";
+BA_ "GenMsgCycleTime" BO_ 2364605392 100;
+BA_ "GenMsgCycleTime" BO_ 2550255781 100;
+BA_ "GenMsgCycleTime" BO_ 2550321317 1000;
+BA_ "GenMsgCycleTime" BO_ 2550255782 100;
+BA_ "GenMsgCycleTime" BO_ 2550321318 1000;
+BA_ "GenMsgCycleTime" BO_ 2550255783 100;
+BA_ "GenMsgCycleTime" BO_ 2550321319 1000;
+BA_ "GenMsgCycleTime" BO_ 2364604880 10;
+BA_ "GenMsgCycleTime" BO_ 2566062504 100;
+BA_ "GenMsgCycleTime" BO_ 2566062520 1000;
+BA_ "GenMsgCycleTime" BO_ 2550386855 10000;
+BA_ "GenMsgCycleTime" BO_ 2550386854 10000;
+BA_ "GenMsgCycleTime" BO_ 2550386853 10000;
+BA_ "GenMsgCycleTime" BO_ 2566062536 10000;
+BA_ "GenSigStartValue" SG_ 2364605392 EHPS_Enable_Demand 0;
+BA_ "GenSigStartValue" SG_ 2364605392 EAC_Enable_Demand 0;
+BA_ "GenSigStartValue" SG_ 2364605392 DCDC_Enable_Demand 0;
+BA_ "GenSigStartValue" SG_ 2364605392 EHPS__Spd_Demand 10000;
+BA_ "GenSigStartValue" SG_ 2364605392 EAC_Spd_Demand 10000;
+BA_ "GenSigStartValue" SG_ 2364605392 VCU_Life 0;
+BA_ "GenSigStartValue" SG_ 2364605392 EHPS_control_mode 0;
+BA_ "GenSigStartValue" SG_ 2364605392 EAC_control_mode 0;
+BA_ "GenSigStartValue" SG_ 2364605392 DCDC_Requested_Output_Voltage 0;
+BA_ "GenSigStartValue" SG_ 2550255781 EHPS_Work_Status 0;
+BA_ "GenSigStartValue" SG_ 2550255781 EHPS_Input_Voltage 0;
+BA_ "GenSigStartValue" SG_ 2550255781 EHPS_Motor_Temperature 40;
+BA_ "GenSigStartValue" SG_ 2550255781 EHPS_inverter_Temperature 40;
+BA_ "GenSigStartValue" SG_ 2550255781 EHPS_Life 0;
+BA_ "GenSigStartValue" SG_ 2550255781 EHPS_Err_Code 0;
+BA_ "GenSigStartValue" SG_ 2550255781 EHPS_Err_Level 0;
+BA_ "GenSigStartValue" SG_ 2550255781 EHPSPowerStatus 0;
+BA_ "GenSigStartValue" SG_ 2550255781 EHPS_Fault_Status 0;
+BA_ "GenSigStartValue" SG_ 2550321317 EHPS_Motor_Spd 10000;
+BA_ "GenSigStartValue" SG_ 2550321317 EHPS_Output_Voltage 0;
+BA_ "GenSigStartValue" SG_ 2550321317 EHPS_Output_Current 0;
+BA_ "GenSigStartValue" SG_ 2550321317 EHPS_Input_Current 0;
+BA_ "GenSigStartValue" SG_ 2550255782 EAC_Err_Code 0;
+BA_ "GenSigStartValue" SG_ 2550255782 EAC_Err_Level 0;
+BA_ "GenSigStartValue" SG_ 2550255782 EAC_Work_Status 0;
+BA_ "GenSigStartValue" SG_ 2550255782 EAC_Input_Voltage 0;
+BA_ "GenSigStartValue" SG_ 2550255782 EAC_inverter_Temperature 40;
+BA_ "GenSigStartValue" SG_ 2550255782 EAC_Life 0;
+BA_ "GenSigStartValue" SG_ 2550255782 EACPowerStatus 0;
+BA_ "GenSigStartValue" SG_ 2550255782 EAC_Fault_Status 0;
+BA_ "GenSigStartValue" SG_ 2550255782 EAC_Motor_Temperature 40;
+BA_ "GenSigStartValue" SG_ 2550321318 EAC_Motor_Spd 10000;
+BA_ "GenSigStartValue" SG_ 2550321318 EAC_Output_Voltage 0;
+BA_ "GenSigStartValue" SG_ 2550321318 EAC_Output_Current 0;
+BA_ "GenSigStartValue" SG_ 2550321318 EAC_Input_Current 0;
+BA_ "GenSigStartValue" SG_ 2550255783 DCDC_Err_Code 0;
+BA_ "GenSigStartValue" SG_ 2550255783 DCDC_Err_Level 0;
+BA_ "GenSigStartValue" SG_ 2550255783 DCDC_Work_Status 0;
+BA_ "GenSigStartValue" SG_ 2550255783 DCDC_Input_Voltage 0;
+BA_ "GenSigStartValue" SG_ 2550255783 DCDC_Input_Current 0;
+BA_ "GenSigStartValue" SG_ 2550255783 DCDC_Temperature 40;
+BA_ "GenSigStartValue" SG_ 2550255783 DCDC_Life 0;
+BA_ "GenSigStartValue" SG_ 2550255783 DCDCPowerStatus 0;
+BA_ "GenSigStartValue" SG_ 2550255783 DCDC_Fault_Status 0;
+BA_ "GenSigStartValue" SG_ 2550321319 DCDC_Output_Voltage 0;
+BA_ "GenSigStartValue" SG_ 2550321319 DCDC_Output_Current 0;
+BA_ "GenSigStartValue" SG_ 2364604880 VCU_MCU_HV_PowerOn_Off_Request 0;
+BA_ "GenSigStartValue" SG_ 2364604880 VCU_Life 0;
+BA_ "GenSigStartValue" SG_ 2364604880 VCU_PDU_Auxiliary_Relay_Enable 0;
+BA_ "GenSigStartValue" SG_ 2364604880 HV2_Relay_Enable 0;
+BA_ "GenSigStartValue" SG_ 2364604880 HV3_Relay_Enable 0;
+BA_ "GenSigStartValue" SG_ 2566062504 PDU_SelfChk_Sts 0;
+BA_ "GenSigStartValue" SG_ 2566062504 PDU_Precharging_Status 0;
+BA_ "GenSigStartValue" SG_ 2566062504 PDU_MCUPosRly_Sts 0;
+BA_ "GenSigStartValue" SG_ 2566062504 PDU_MCUPreRly_Sts 0;
+BA_ "GenSigStartValue" SG_ 2566062504 HV3_Loop_Realy_Sts 0;
+BA_ "GenSigStartValue" SG_ 2566062504 PDU_Auxiliary_Relay_Sts 0;
+BA_ "GenSigStartValue" SG_ 2566062504 HV2_Loop_Realy_Sts 0;
+BA_ "GenSigStartValue" SG_ 2566062504 PDU_Fault_Level 0;
+BA_ "GenSigStartValue" SG_ 2566062504 PDU_Life 0;
+BA_ "GenSigStartValue" SG_ 2566062520 PDU_InputVoltage 0;
+BA_ "GenSigStartValue" SG_ 2566062520 PDU_Fault_Code 0;
+BA_ "GenSigStartValue" SG_ 2550386855 DCDC_Vendor_Software_Versions_1 0;
+BA_ "GenSigStartValue" SG_ 2550386855 DCDC_Vendor_Software_Versions_2 0;
+BA_ "GenSigStartValue" SG_ 2550386855 DCDC_Vendor_Software_Versions_3 0;
+BA_ "GenSigStartValue" SG_ 2550386855 DCDC_client_Software_Version_1 0;
+BA_ "GenSigStartValue" SG_ 2550386855 DCDC_client_Software_Version_2 0;
+BA_ "GenSigStartValue" SG_ 2550386855 DCDC_Software_compilation_time_Y 0;
+BA_ "GenSigStartValue" SG_ 2550386855 DCDC_Software_compilation_time_M 0;
+BA_ "GenSigStartValue" SG_ 2550386855 DCDC_Software_compilation_time_D 0;
+BA_ "GenSigStartValue" SG_ 2550386854 EAC_Vendor_Software_Versions_1 0;
+BA_ "GenSigStartValue" SG_ 2550386854 EAC_Vendor_Software_Versions_2 0;
+BA_ "GenSigStartValue" SG_ 2550386854 EAC_Vendor_Software_Versions_3 0;
+BA_ "GenSigStartValue" SG_ 2550386854 EAC_client_Software_Version_1 0;
+BA_ "GenSigStartValue" SG_ 2550386854 EAC_client_Software_Version_2 0;
+BA_ "GenSigStartValue" SG_ 2550386854 EAC_Software_compilation_time_Ye 0;
+BA_ "GenSigStartValue" SG_ 2550386854 EAC_Software_compilation_time_Mo 0;
+BA_ "GenSigStartValue" SG_ 2550386854 EAC_Software_compilation_time_Da 0;
+BA_ "GenSigStartValue" SG_ 2550386853 EHPS_Vendor_Software_Versions_1 0;
+BA_ "GenSigStartValue" SG_ 2550386853 EHPS_Vendor_Software_Versions_2 0;
+BA_ "GenSigStartValue" SG_ 2550386853 EHPS_Vendor_Software_Versions_3 0;
+BA_ "GenSigStartValue" SG_ 2550386853 EHPS_client_Software_Version_1 0;
+BA_ "GenSigStartValue" SG_ 2550386853 EHPS_client_Software_Version_2 0;
+BA_ "GenSigStartValue" SG_ 2550386853 EHPS_Software_compilation_time_Y 0;
+BA_ "GenSigStartValue" SG_ 2550386853 EHPS_Software_compilation_time_M 0;
+BA_ "GenSigStartValue" SG_ 2550386853 EHPS_Software_compilation_time_D 0;
+BA_ "GenSigStartValue" SG_ 2566062536 PDU_Vendor_Software_Versions_1 0;
+BA_ "GenSigStartValue" SG_ 2566062536 PDU_Vendor_Software_Versions_2 0;
+BA_ "GenSigStartValue" SG_ 2566062536 PDU_Vendor_Software_Versions_3 0;
+BA_ "GenSigStartValue" SG_ 2566062536 PDU_client_Software_Version_1 0;
+BA_ "GenSigStartValue" SG_ 2566062536 PDU_client_Software_Version_2 0;
+BA_ "GenSigStartValue" SG_ 2566062536 PDU_Software_compilation_time_Y 0;
+BA_ "GenSigStartValue" SG_ 2566062536 PDU_Software_compilation_time_M 0;
+BA_ "GenSigStartValue" SG_ 2566062536 PDU_Software_compilation_time_D 0;
+VAL_ 2364605392 EHPS_Enable_Demand 1 "ON" 0 "OFF" ;
+VAL_ 2364605392 EAC_Enable_Demand 1 "ON" 0 "OFF" ;
+VAL_ 2364605392 DCDC_Enable_Demand 1 "ON" 0 "OFF" ;
+VAL_ 2364605392 EHPS_control_mode 0 "Run at the rated speed" 1 "Run at the requested speed" ;
+VAL_ 2364605392 EAC_control_mode 0 "Run at the rated speed" 1 "Run at the requested speed" ;
+VAL_ 2550255781 EHPS_Work_Status 0 "STOP" 1 "RUN" ;
+VAL_ 2550255781 EHPS_Err_Code 0 "No fault" 1 "Software overcurrent(OC)" 2 "Hardware overcurrent(OC2)" 3 "Input  OverVoltage(OV)" 4 "Input UnderVoltage(UV)" 5 "Motor Overload(OL)" 6 "Controller overload" 7 "IGBT Over Temperature" 8 "Motor Over Temperature" 9 "The ambient temperature is too high" 10 "PT100 Fault" 11 "Sensor detection failure" 12 "CAN fault" 13 "Hardware overvoltage" 14 "Speed deviation fault(DEU)" 15 "Maladjustment(STO)" 16 "SPO" 17 "EEPROM Fault" 18 "Self learning Error" 19 "485 communication failure" 20 "bus off fault" 21 "Motor Over Temperature 2/keyboard upload fault" 22 "Out fault/keyboard download fault" 23 "Encoder disconnection fault" 24 "Encoder reverse fault" 25 "Z impulse break" 26 "Encoder interface failure" 27 "HCU out of sync" 28 "Output(24V)OverVoltage" 29 "Output(24V)UnderVoltage" 30 "IGBT temp sensor short circuit" 31 "IGBT temp sensor open circuit" 32 "OT Limits power" ;
+VAL_ 2550255781 EHPS_Err_Level 0 "No Fault" 1 "Level1" 2 "Level2" 3 "Level3" 4 "Level4" ;
+VAL_ 2550255781 EHPSPowerStatus 0 "Low Power Ready" 1 "High Power Ready" ;
+VAL_ 2550255781 EHPS_Fault_Status 0 "No Fault" 1 "Fault" ;
+VAL_ 2550255782 EAC_Err_Code 0 "No fault" 1 "Software overcurrent(OC)" 2 "Hardware overcurrent(OC2)" 3 "Input  OverVoltage(OV)" 4 "Input UnderVoltage(UV)" 5 "Motor Overload(OL)" 6 "Controller overload" 7 "IGBT Over Temperature" 8 "Motor Over Temperature" 9 "The ambient temperature is too high" 10 "PT100 Fault" 11 "Sensor detection failure" 12 "CAN fault" 13 "Hardware overvoltage" 14 "Speed deviation fault(DEU)" 15 "Maladjustment(STO)" 16 "SPO" 17 "EEPROM Fault" 18 "Self learning Error" 19 "485 communication failure" 20 "bus off fault" 21 "Motor Over Temperature 2/keyboard upload fault" 22 "Out fault/keyboard download fault" 23 "Encoder disconnection fault" 24 "Encoder reverse fault" 25 "Z impulse break" 26 "Encoder interface failure" 27 "HCU out of sync" 28 "Output(24V)OverVoltage" 29 "Output(24V)UnderVoltage" 30 "IGBT temp sensor short circuit" 31 "IGBT temp sensor open circuit" 32 "OT Limits power" ;
+VAL_ 2550255782 EAC_Err_Level 0 "No Fault" 1 "Level1" 2 "Level2" 3 "Level3" 4 "Level4" ;
+VAL_ 2550255782 EAC_Work_Status 0 "STOP" 1 "RUN" ;
+VAL_ 2550255782 EACPowerStatus 0 "Low Power Ready" 1 "High Power Ready" ;
+VAL_ 2550255782 EAC_Fault_Status 0 "No Fault" 1 "Fault" ;
+VAL_ 2550255783 DCDC_Err_Code 0 "No Fault" 1 "OT Limits power" 2 "Hardware Fault" 3 "Output Overvoltage" 4 "Output  Undervoltage" 5 "Thermal Fault" 6 "Output Over current" 7 "CAN Fault" 8 "Input OverVoltage" 9 "Input  UnderVoltage" 10 "Output(24V)UnderVoltage" 11 "Open Circuit" 12 "Short Circuit" 13 "Output(24V)OverVoltage" 14 "Precharge  Error" 15 "Buck Error" ;
+VAL_ 2550255783 DCDC_Err_Level 0 "No Fault" 1 "Level1" 2 "Level2" 3 "Level3" 4 "Level4" ;
+VAL_ 2550255783 DCDC_Work_Status 0 "STOP" 1 "RUN" ;
+VAL_ 2550255783 DCDCPowerStatus 0 "Low Power Ready" 1 "High Power Ready" ;
+VAL_ 2550255783 DCDC_Fault_Status 0 "No Fault" 1 "Fault" ;
+VAL_ 2364604880 VCU_MCU_HV_PowerOn_Off_Request 0 "Not Request" 1 "PowerOn_Request" 2 "PowerOff_Request" 3 "Not available" ;
+VAL_ 2364604880 VCU_PDU_Auxiliary_Relay_Enable 0 "Disable Demand" 1 "Enable Demand" 2 "Not available" 3 "Not available" ;
+VAL_ 2364604880 HV2_Relay_Enable 0 "Disable Demand" 1 "Enable Demand" 2 "Not available" 3 "Not available" ;
+VAL_ 2364604880 HV3_Relay_Enable 0 "Disable Demand" 1 "Enable Demand" 2 "Not available" 3 "Not available" ;
+VAL_ 2566062504 PDU_SelfChk_Sts 0 "No Fault" 1 "Fault" 2 "Invalid" 3 "Invalid" ;
+VAL_ 2566062504 PDU_Precharging_Status 0 "Open" 1 "PreCharging" 2 "PreCharge Finish" 3 "PreCharging Fault" ;
+VAL_ 2566062504 PDU_MCUPosRly_Sts 0 "Open" 1 "Close" 2 "Weld" 3 "Closing failure" ;
+VAL_ 2566062504 PDU_MCUPreRly_Sts 0 "Open" 1 "Close" 2 "Weld" 3 "Closing failure" ;
+VAL_ 2566062504 HV3_Loop_Realy_Sts 0 "Open" 1 "Close" 2 "Weld" 3 "Closing failure" ;
+VAL_ 2566062504 PDU_Auxiliary_Relay_Sts 0 "Open" 1 "Close" 2 "Weld" 3 "Closing failure" ;
+VAL_ 2566062504 HV2_Loop_Realy_Sts 0 "Open" 1 "Close" 2 "Weld" 3 "Closing failure" ;
+VAL_ 2566062504 PDU_Fault_Level 0 "No Fault" 1 "Level1" 2 "Level2" 3 "Level3" 4 "Level4" ;
+VAL_ 2566062520 PDU_Fault_Code 0 "No Fault" 1 "Precharge Error" 2 "CAN communication Fault" 3 "Main contactor adhesion fault" 4 "Main contactor Close failure" 5 "Auxiliary contactor adhesion fault" 6 "Auxiliary contactor Close failure" 7 "HV2 contactor adhesion fault" 8 "HV2 contactor Close failure" 9 "HV3 contactor adhesion fault" 10 "HV3 contactor Close failure" ;
+

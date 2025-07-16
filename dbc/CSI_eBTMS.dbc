@@ -1,0 +1,101 @@
+VERSION "DBC_CSI_BTMS"
+
+
+NS_ :
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: BMS TMS
+VAL_TABLE_ TMSfaultLevel 3 "Level 3 Fault" 2 "Level 2 Fault" 1 "Level 1 Fault" 0 "No Faults" ;
+VAL_TABLE_ TMSfaultCodes 51 "DCDC Level 2 Fault" 50 "Exhaust Gas Temp Level 2 Fault" 49 "HVIL contactor Level 1Fault" 48 "BMS'TMS Loss of Comm  Level 1" 47 "LV Power Supply Level 2 Fault" 42 "Lost Comm from Unit2 Level 1" 40 "Slave Unit 2 Level 2 Fault" 39 "Slave Unit 2 Level 1 Fault" 38 "Lost Comm from Unit1 Level 1" 36 "Slave unit 1 Level 2 Fault" 35 "Slave Unit 1 Level 1 Fault" 34 "DCDC Level 1 Fault" 33 "K2 Relay Level 1 - Reserved" 31 "PTCwaterTempSensr level 2 fault" 30 "WaterLevelSensor Level 2 Fault" 27 "Water Pump Level 2 Fault" 26 "Description for the value '0x1A'" 25 "BTMSoutTempSensor level 2 fault" 24 "Description for the value '0x18'" 23 "Low press sensor level 3 fault" 22 "High press sensor level 2 fault" 21 "Cooling Fan level 2 fault" 20 "Description for the value '0x14'" 19 "Compressor level 2 fault" 14 "Single PTC Level 2 Failure" 13 "PTC Level 1 Failure" 11 "Single PTC Level 2 Failure" 10 "PTC Level 1 Failure" 5 "Single PTC Level 2 Failure" 4 "PTC Level 1 Failure" 2 "Single PTC Level 2 Failure" 1 "PTC Level 1 Failure" 0 "No Faults" ;
+VAL_TABLE_ Invalid255 597 "Invalid" ;
+VAL_TABLE_ B2T_BMS_HVRelayST_A 3 "Invalid" 2 "Invalid" 1 "Closed" 0 "Open" ;
+VAL_TABLE_ B2T_ChgST_A 3 "Invalid" 2 "Invalid" 1 "Charging Mode" 0 "Non-Charging Mode" ;
+VAL_TABLE_ BMS2TMS_HighVoltage 415029 "Invalid" ;
+VAL_TABLE_ BMS2TMS_HV_Request 3 "Invalid" 2 "Invalid" 1 "HV Off Request" 0 "HV On Request" ;
+VAL_TABLE_ BMS2TMS_HV_Relay_State 3 "Invalid" 2 "Invalid" 1 "Closed" 0 "Open" ;
+VAL_TABLE_ B2T_RQ_SetMode_A 3 "Self-Loop_Mode" 2 "Heat_Mode" 1 "Cooling_Mode" 0 "ShutDown_Mode" ;
+
+
+BO_ 0 New_Message_3: 8 Vector__XXX
+ SG_ New_Signal_16 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2566897978 TM2B_Info: 8 TMS
+ SG_ TM2B_RQPower_A : 47|16@0+ (0.1,0) [0|100] "kW" Vector__XXX
+ SG_ T2B_WorkStatus_A : 1|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ TM2B_OutletTemp_A : 15|8@0+ (1,-40) [-40|215] "�C" Vector__XXX
+ SG_ TM2B_InletTemp_A : 23|8@0+ (1,-40) [-40|215] "�C" Vector__XXX
+ SG_ T2B_TMS_HVRelayST_A : 3|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ TMS2BMS_DTC_Level : 63|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ TM2B_FaultCode_A : 61|6@0+ (1,0) [0|63] "" Vector__XXX
+
+BO_ 2566866179 B2TM_Info: 8 BMS
+ SG_ B2T_RQ_SetMode_A : 1|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ B2T_SetTemp_A : 39|8@0+ (1,-40) [-40|215] "�C" Vector__XXX
+ SG_ B2TM_BMS_ALIV_A : 55|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ B2T_RQ_HV_A : 3|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ B2T_BMS_HVRelayST_A : 7|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ B2T_BMS_HVVolt_A : 15|16@0+ (1,0) [0|65535] "V" Vector__XXX
+ SG_ B2TM_CRC_A : 63|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ B2T_ChgST_A : 5|2@0+ (1,0) [0|3] "" Vector__XXX
+
+
+
+CM_ SG_ 2566897978 TM2B_RQPower_A "TMS requirement power";
+CM_ SG_ 2566897978 T2B_WorkStatus_A "TMS work status";
+CM_ SG_ 2566897978 TM2B_OutletTemp_A "TMS outlet water temperature(From TMS to pack)";
+CM_ SG_ 2566897978 TM2B_InletTemp_A "TMS flooding water temperature(From TMS to pack)";
+CM_ SG_ 2566897978 T2B_TMS_HVRelayST_A "TMS contactor status";
+CM_ SG_ 2566897978 TMS2BMS_DTC_Level "TMS fault level";
+CM_ SG_ 2566897978 TM2B_FaultCode_A "TMS Fault Code";
+CM_ SG_ 2566866179 B2T_RQ_SetMode_A "Working mode command from BMS to TMS";
+CM_ SG_ 2566866179 B2T_SetTemp_A "Setting temperature";
+CM_ SG_ 2566866179 B2TM_BMS_ALIV_A "BMS life signal(Reserved";
+CM_ SG_ 2566866179 B2T_RQ_HV_A "High-voltage command from BMS to TMS";
+CM_ SG_ 2566866179 B2T_BMS_HVRelayST_A "BMS high-voltage contactor status";
+CM_ SG_ 2566866179 B2T_BMS_HVVolt_A "Pack voltage";
+CM_ SG_ 2566866179 B2TM_CRC_A "CRC(Reserved)";
+CM_ SG_ 2566866179 B2T_ChgST_A "BMS charge status";
+BA_DEF_  "BusType" STRING ;
+BA_DEF_DEF_  "BusType" "CAN";
+VAL_ 2566897978 TM2B_RQPower_A 65535 "Invalid" ;
+VAL_ 2566897978 T2B_WorkStatus_A 3 "Self-Loop_Mode" 2 "Heat_Mode" 1 "Cooling_Mode" 0 "ShutDown_Table" ;
+VAL_ 2566897978 TM2B_OutletTemp_A 255 "Invalid" ;
+VAL_ 2566897978 TM2B_InletTemp_A 255 "Invalid" ;
+VAL_ 2566897978 T2B_TMS_HVRelayST_A 3 "Invalid" 2 "Invalid" 1 "Closed" 0 "Open" ;
+VAL_ 2566897978 TMS2BMS_DTC_Level 3 "Level 3 Fault" 2 "Level 2 Fault" 1 "Level 1 Fault" 0 "No Faults" ;
+VAL_ 2566897978 TM2B_FaultCode_A 60 "Heating contactor 3 disconnected" 59 "Heating contactor 2 disconnected" 58 "Heating contactor 1 disconnected" 57 "all 3 contactors disconnect" 54 "heating contactor 3 adhesion" 53 "heating contactor 2 adhesion" 52 "heating contactor 1 adhesion" 3 "PTC_temp_feedback" 51 "DCDC Level 2 Fault" 49 "high voltage contactor failure" 48 "BMS'TMS Loss of Comm  Level 1" 47 "LV Power Supply Level 2 Fault" 30 "WaterLevelSensor Level 2 Fault" 27 "Water Pump Level 2 Fault" 25 "coolant outlet temp lvl2 fault" 24 "coolant Inlet temp lvl2 fault" 23 "Low press sensor level 3 fault" 22 "High press sensor level 2 fault" 21 "Cooling Fan level 2 fault" 20 "Description for the value '0x14'" 19 "AC Compressor level 2 fault" 2 "3way_water_valve_lvl2" 1 "Level_2_ambient_temp_sensor" 0 "No Faults" ;
+VAL_ 2566866179 B2T_RQ_SetMode_A 3 "Self-Loop_Mode" 2 "Heat_Mode" 1 "Cooling_Mode" 0 "ShutDown_Table" ;
+VAL_ 2566866179 B2T_RQ_HV_A 3 "Invalid" 2 "Invalid" 1 "HV Off Request" 0 "HV On Request" ;
+VAL_ 2566866179 B2T_BMS_HVRelayST_A 3 "Invalid" 2 "Invalid" 1 "Closed" 0 "Open" ;
+VAL_ 2566866179 B2T_BMS_HVVolt_A 65535 "Invalid" ;
+VAL_ 2566866179 B2T_ChgST_A 3 "Invalid" 2 "Invalid" 1 "Charging Mode" 0 "Non-Charging Mode" ;
+

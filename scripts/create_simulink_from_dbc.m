@@ -24,6 +24,23 @@ else
     error('First input must be either a DBC file path or a cell array of signal names');
 end
 
+% Validate model name
+if contains(model_name, '/') || contains(model_name, '\')
+    error('Model name cannot contain path separators (/ or \). Please use a simple name like ''%s''', ...
+        strrep(model_name, '/', '_'));
+end
+
+% Check for very large number of signals
+if length(signal_names) > 50
+    warning('Large number of signals detected (%d). Consider using the enhanced version with grouping.', ...
+        length(signal_names));
+    response = input('Continue anyway? (y/n): ', 's');
+    if ~strcmpi(response, 'y')
+        fprintf('Model creation cancelled.\n');
+        return;
+    end
+end
+
 % Create new Simulink model
 try
     close_system(model_name, 0);
@@ -31,8 +48,16 @@ catch
     % Model doesn't exist, that's fine
 end
 
-new_system(model_name);
-open_system(model_name);
+try
+    new_system(model_name);
+    open_system(model_name);
+catch ME
+    if contains(ME.message, 'already exists')
+        error('Model ''%s'' already exists and is locked. Please close it first or use a different name.', model_name);
+    else
+        rethrow(ME);
+    end
+end
 
 % Layout parameters
 port_height = 30;
@@ -43,22 +68,36 @@ start_y = 50;
 start_x_in = 50;
 start_x_out = start_x_in + horizontal_spacing;
 
+% For large models, use multiple columns
+max_signals_per_column = 20;
+column_spacing = 600;
+num_columns = ceil(length(signal_names) / max_signals_per_column);
+
 % Add blocks for each signal
 for i = 1:length(signal_names)
     signal_name = signal_names{i};
-    y_position = start_y + (i-1) * vertical_spacing;
+    
+    % Calculate column and row for large models
+    column = floor((i-1) / max_signals_per_column);
+    row = mod(i-1, max_signals_per_column);
+    
+    y_position = start_y + row * vertical_spacing;
+    x_offset = column * column_spacing;
+    
+    % Clean signal name (remove any invalid characters)
+    signal_name = regexprep(signal_name, '[^a-zA-Z0-9_]', '_');
     
     % Create input port
     in_port_name = sprintf('in_%s', signal_name);
     in_port_path = sprintf('%s/%s', model_name, in_port_name);
     add_block('simulink/Sources/In1', in_port_path);
-    set_param(in_port_path, 'Position', [start_x_in, y_position, start_x_in + port_width, y_position + port_height]);
+    set_param(in_port_path, 'Position', [start_x_in + x_offset, y_position, start_x_in + x_offset + port_width, y_position + port_height]);
     
     % Create output port
     out_port_name = sprintf('out_%s', signal_name);
     out_port_path = sprintf('%s/%s', model_name, out_port_name);
     add_block('simulink/Sinks/Out1', out_port_path);
-    set_param(out_port_path, 'Position', [start_x_out, y_position, start_x_out + port_width, y_position + port_height]);
+    set_param(out_port_path, 'Position', [start_x_out + x_offset, y_position, start_x_out + x_offset + port_width, y_position + port_height]);
     
     % Connect input to output
     add_line(model_name, sprintf('%s/1', in_port_name), sprintf('%s/1', out_port_name), 'autorouting', 'on');

@@ -28,7 +28,7 @@ if nargin < 3
     options = struct();
 end
 if ~isfield(options, 'groupByMessage'), options.groupByMessage = false; end
-if ~isfield(options, 'addAnnotations'), options.addAnnotations = true; end
+if ~isfield(options, 'addAnnotations'), options.addAnnotations = false; end  % Changed to false by default
 if ~isfield(options, 'colorCode'), options.colorCode = true; end
 if ~isfield(options, 'addDataTypes'), options.addDataTypes = false; end
 
@@ -48,13 +48,28 @@ else
     error('Invalid input type');
 end
 
+% Validate model name
+if contains(model_name, '/') || contains(model_name, '\')
+    error('Model name cannot contain path separators (/ or \). Please use a simple name like ''%s''', ...
+        strrep(model_name, '/', '_'));
+end
+
 % Create model
 try
     close_system(model_name, 0);
 catch
 end
-new_system(model_name);
-open_system(model_name);
+
+try
+    new_system(model_name);
+    open_system(model_name);
+catch ME
+    if contains(ME.message, 'already exists')
+        error('Model ''%s'' already exists and is locked. Please close it first or use a different name.', model_name);
+    else
+        rethrow(ME);
+    end
+end
 
 % Group signals by message if requested
 if options.groupByMessage
@@ -146,11 +161,15 @@ for i = 1:length(signals)
             annotation_text = sprintf('%s\n(%s)', annotation_text, signal.message);
         end
         
-        annotation_pos = [start_x_in + port_width + 10, y_position - 10, start_x_in + port_width + 200, y_position + 20];
-        add_block('simulink/Model-Wide Utilities/Model Info', sprintf('%s/info_%s', model_name, signal.name));
-        set_param(sprintf('%s/info_%s', model_name, signal.name), 'Position', annotation_pos);
-        set_param(sprintf('%s/info_%s', model_name, signal.name), 'ShowName', 'off');
-        set_param(sprintf('%s/info_%s', model_name, signal.name), 'InfoString', annotation_text);
+        % Use Annotation instead of Model Info block
+        annotation_x = (start_x_in + start_x_out) / 2;
+        annotation_y = y_position + port_height + 5;
+        
+        annotation_pos = [annotation_x - 50, annotation_y, annotation_x + 50, annotation_y + 20];
+        add_block('built-in/Note', sprintf('%s/Note_%d', model_name, i), ...
+            'Position', annotation_pos, ...
+            'ShowName', 'off', ...
+            'Description', annotation_text);
     end
 end
 end

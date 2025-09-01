@@ -38,3 +38,5 @@ octave-workspace
 *.r2024a
 
 .DS_Store
+
+fmu/
